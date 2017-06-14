@@ -16,7 +16,7 @@ monApp.factory('biensProvider', function($http){
 		});
 	}
 	
-	function findProperty(property, calback){
+	function findProperty(id, calback){
 		$http({
 			method: 'GET',
 			url: restUrl+'Bien?pId='+id
@@ -44,10 +44,42 @@ monApp.factory('biensProvider', function($http){
 		});
 	}
 	
+	function updateProperty(property, calback){
+		$http({
+			method: 'PUT',
+			url: restUrl+'updateBien/',
+			data: angular.toJson(property),
+			header: {
+				'content-Type':'application/json'
+			}
+		}).then(function successCalback(response){
+			console.log(response.data);
+			calback(response.data);
+		}, function echecCalback(response){
+			console.log("erreur : " + response.status + " " + response.statusText);
+		});
+	}
+	
+
+	
+	function deleteProperty(id, calback){
+		$http({
+			method: 'DELETE',
+			url: restUrl+'deleteBien?pId='+id
+		}).then(function successCalback(response){
+			console.log(response);
+			calback(response);
+		}, function echecCalback(response){
+			console.log("erreur : " + response.status + " " + response.statusText);
+		});
+	}
+	
 	return {
 		getListProperty:findAllProperty,
 		getProperty:findProperty,
-		createProperty:addProperty
+		createProperty:addProperty,
+		changeProperty:updateProperty,
+		removeProperty:deleteProperty
 		};
 	
 })

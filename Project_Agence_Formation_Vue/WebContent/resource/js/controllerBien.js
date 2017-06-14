@@ -3,25 +3,29 @@ monApp
 .controller('findAllPropertyController', function($scope, biensProvider, $rootScope, $location, $window) {
 	biensProvider.getListProperty(function(calback){
 		$scope.listeBiens=calback;
-		if ($scope.listeBiens.genre==1){
-			$scope.indice1=false;
-			$scope.indice2=true;
-		}
-		else {
-			$scope.indice1=true;
-			$scope.indice2=false;
-		}
 	});
 })
 
 .controller('findPropertyByID', function($scope, biensProvider, $rootScope, $location){
 	$scope.cache=false;
-	$scope.id=undefined;
+	$scope.indice1=false;
+	$scope.indice2=false;
+	$scope.id= 0;
 	$scope.findProperty=function(){
 		biensProvider.getProperty($scope.id, function(calback){
 			if ((calback!=0)&&(calback!="")) {
 				$scope.cache=true;
-				$scope.property=calback;
+				$scope.b=calback;
+				if ($scope.b.genre==1){
+					$scope.indice1=true;
+					$scope.indice2=false;
+				}
+				else {
+					$scope.indice1=false;
+					$scope.indice2=true;
+				}
+				console.log($scope.indice1);
+				console.log($scope.indice2);
 			}
 		});
 	};
@@ -52,23 +56,87 @@ monApp
 		dateDispo: undefined,
 		dateMEL: undefined
 	};
+	
 	$scope.infoSup=function(genre){
-		genre=$scope.addPropertyForm.genre;
-		if (genre==1) {
+		console.log(genre);
+		if (genre=="true") {
 			$scope.indice1=true;
 			$scope.indice2=false;
-			$scope.indice3=true;
 		}
 		else {
 			$scope.indice1=false;
 			$scope.indice2=true;
-			$scope.indice3=true;
 		}
-	}
+		$scope.indice3=true;
+		console.log($scope.indice1);
+		console.log($scope.indice2);
+		console.log($scope.indice3);
+	};
 	$scope.addProperty=function(){
 		biensProvider.createProperty($scope.addPropertyForm, function(calback){
 			if ((calback!=0)&&(calback!="")) {
-				$location.path('/findListProperty');
+				$location.path('/listOfProperty');
+			}
+		});
+	};
+})
+
+.controller('updatePropertyController', function($scope, biensProvider, $location){
+	$scope.indice1=false;
+	$scope.indice2=false;
+	$scope.indice3=false;
+	$scope.updatePropertyForm={
+		type: "",
+		superficie: 0,
+		genre: undefined,
+		statut: "",
+		image: "",
+		cadastre: "",
+		prix: 0,
+		etat: "",
+		loyer: 0,
+		charges: 0,
+		caution: 0,
+		garniture: "",
+		adresse: {
+			rue: "",
+			codePostal: "",
+			ville
+		},
+		dateDispo: undefined,
+		dateMEL: undefined
+	};
+	
+	$scope.infoSup=function(genre){
+		console.log(genre);
+		if (genre=="true") {
+			$scope.indice1=true;
+			$scope.indice2=false;
+		}
+		else {
+			$scope.indice1=false;
+			$scope.indice2=true;
+		}
+		$scope.indice3=true;
+		console.log($scope.indice1);
+		console.log($scope.indice2);
+		console.log($scope.indice3);
+	};
+	$scope.updateProperty=function(){
+		biensProvider.changeProperty($scope.updatePropertyForm, function(calback){
+			if ((calback!=0)&&(calback!="")) {
+				$location.path('/listOfProperty');
+			}
+		});
+	};
+})
+
+.controller('deletePropertyController', function($scope, biensProvider, $location){
+	$scope.id=undefined;
+	$scope.deleteProperty=function(){
+		biensProvider.removeProperty($scope.id, function(calback){
+			if ((calback!=undefined)&&(calback!="")) {
+				$location.path('/listOfProperty');
 			}
 		});
 	};

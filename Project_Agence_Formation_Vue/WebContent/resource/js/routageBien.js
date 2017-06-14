@@ -1,6 +1,6 @@
 monApp.config(function ($routeProvider) {
 	
-	$routeProvider.when('/findListProperty', {
+	$routeProvider.when('/listOfProperty', {
 		controller: 'findAllPropertyController',
 		templateUrl: 'partials/findAllProperty.html'
 	})
@@ -12,8 +12,16 @@ monApp.config(function ($routeProvider) {
 		controller: 'addPropertyController',
 		templateUrl: 'partials/createProperty.html'
 	})
+	.when('/updateProperty', {
+		controller: 'updatePropertyController',
+		templateUrl: 'partials/updateProperty.html'
+	})
+	.when('/deleteProperty', {
+		controller: 'deletePropertyController',
+		templateUrl: 'partials/deleteProperty.html'
+	})
 	.otherwise({
-		redirectTo: '/findListProperty'
+		redirectTo: '/listOfProperty'
 	});
 	
 })
