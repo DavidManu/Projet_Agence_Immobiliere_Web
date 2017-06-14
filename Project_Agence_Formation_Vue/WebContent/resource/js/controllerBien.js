@@ -3,6 +3,14 @@ monApp
 .controller('findAllPropertyController', function($scope, biensProvider, $rootScope, $location, $window) {
 	biensProvider.getListProperty(function(calback){
 		$scope.listeBiens=calback;
+		if ($scope.listeBiens.genre==1){
+			$scope.indice1=false;
+			$scope.indice2=true;
+		}
+		else {
+			$scope.indice1=true;
+			$scope.indice2=false;
+		}
 	});
 })
 
