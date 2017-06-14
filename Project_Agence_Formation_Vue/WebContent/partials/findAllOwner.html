@@ -1,24 +1,29 @@
-<h1 align="center" style="color: white;">Liste des proprietaires</h1>
-<br>
-<table class="table table-bordered" style="align:center;">
-	<tr>
-		<th style="text-align: center">ID</th>
-		<th style="text-align: center">Nom</th>
-		<th style="text-align: center">Prenom</th>
-		<th style="text-align: center">NumPrive</th>
-		<th style="text-align: center">NumTravail</th>
-		<th style="text-align: center">Rue</th>
-		<th style="text-align: center">CodePostal</th>
-		<th style="text-align: center">Ville</th>
-	</tr>
-	<tr ng-repeat="owner in listeOwner">
-		<td style="text-align: center">{{owner.id}}</td>
-		<td style="text-align: center">{{owner.nom}}</td>
-		<td style="text-align: center">{{owner.prenom}}</td>
-		<td style="text-align: center">{{owner.numPrive}}</td>
-		<td style="text-align: center">{{owner.numTravail}}</td>
-		<td style="text-align: center">{{owner.adresse.rue}}</td>
-		<td style="text-align: center">{{owner.adresse.codePostal}}</td>
-		<td style="text-align: center">{{owner.adresse.ville}}</td> 
-	</tr>
-</table>
+<h1 align="center" style="color: white;">Liste des proprietaires</h1> 
+<div class="container">
+	<div class="row col-md-6 col-md-offset-2 custyle"
+		style="margin: auto; width: 100%">
+		<table class="table table-bordered"
+			style="background-color: white; margin-top: 40px">
+			<tr>
+				<th style="text-align: center">ID</th>
+				<th style="text-align: center">Nom</th>
+				<th style="text-align: center">Prenom</th>
+				<th style="text-align: center">NumPrive</th>
+				<th style="text-align: center">NumTravail</th>
+				<th style="text-align: center">Rue</th>
+				<th style="text-align: center">CodePostal</th>
+				<th style="text-align: center">Ville</th>
+			</tr>
+			<tr ng-repeat="owner in listeOwner" style="text-align: center">
+				<td style="text-align: center">{{owner.id}}</td>
+				<td style="text-align: center">{{owner.nom}}</td>
+				<td style="text-align: center">{{owner.prenom}}</td>
+				<td style="text-align: center">{{owner.numPrive}}</td>
+				<td style="text-align: center">{{owner.numTravail}}</td>
+				<td style="text-align: center">{{owner.adresse.rue}}</td>
+				<td style="text-align: center">{{owner.adresse.codePostal}}</td>
+				<td style="text-align: center">{{owner.adresse.ville}}</td>
+			</tr>
+		</table>
+	</div>
+</div>
