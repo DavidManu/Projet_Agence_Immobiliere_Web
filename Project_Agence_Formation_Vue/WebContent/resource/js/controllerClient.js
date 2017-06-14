@@ -1,8 +1,6 @@
 monApp.controller("findAllCustomerCtrl", function($scope, CustomerProvider) {
 
-	$scope.id = undefined;
-
-	CustomerProvider.findAllC($scope.id, function(callBack) {
+	CustomerProvider.findAllC(function(callBack) {
 
 		$scope.listeCustomer = callBack;
 	});
@@ -55,14 +53,17 @@ monApp.controller("createCustomerCtrl", function($scope, CustomerProvider,
 		nom : "",
 		prenom : "",
 		numPrive : undefined,
-		mail : undefined,
 		adresse : {
 			rue : "",
 			codePostal : "",
 			ville : ""
 		},
-		classeSt_id : "",
-		conseiller_id : ""
+		classeSt : {
+			id : undefined
+		},
+		conseiller : {
+			id : undefined
+		}
 	}
 
 	$scope.ajouter = function() {
@@ -86,14 +87,17 @@ monApp.controller("updateCustomerCtrl", function($scope, CustomerProvider,
 		nom : "",
 		prenom : "",
 		numPrive : undefined,
-		mail : undefined,
 		adresse : {
 			rue : "",
 			codePostal : "",
 			ville : ""
 		},
-		classeSt_id : "",
-		conseiller_id : ""
+		classeSt : {
+			id : undefined
+		},
+		conseiller : {
+			id : undefined
+		}
 	}
 	$scope.modifier = function() {
 

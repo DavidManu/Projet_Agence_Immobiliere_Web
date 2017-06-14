@@ -1,33 +1,27 @@
-<br/>
-<br/>
-<div style="display: inline-block;position: absolute;margin-top: 0%;width: 25%; margin-left: 5%">
-	<ul class="nav nav-pills nav-stacked">
-		<li>coucou<li>
-		<li>coucou<li>
-		<li>coucou<li>
-		<li>coucou<li>
-	</ul>
-</div>
-<div style="display: inline-block;margin-top: 0%;width: 60%; margin-left: 35%">
-	<ul class="media-list">
-  		<li class="media" ng-repeat="b in listeBiens" >
-    		<div class="media-left">
-        			<img src={{b.image}} width="256px">
-    		</div>
-    		<div class="media-body">
-    			<ul>
-    				<li ng-show='indice1'><p style="text-align: left"><b>{{b.type}} a acheter</b></p></li>
-    				<li ng-show='indice2'><p style="text-align: left"><b>{{b.type}} a louer ({{b.garniture}})</b></p></li>
-    				<li><p style="text-align: left"><b>batiment {{b.etat}}</b></p></li>
-    				<li><p style="text-align: left"><b>superficie de {{b.superficie|number:1}} m*m</b></p></li>
-    				<li ng-show='indice1'><p style="text-align: left"><b>prix : {{b.prix|number:0}} euros</b></p></li>
-    				<li ng-show='indice2'><p style="text-align: left"><b>loyer : {{b.loyer|number:0}} + {{b.charges|number:0}} de charges</b></p></li>
-    				<li ng-show='indice2'><p style="text-align: left"><b>caution : {{b.caution|number:0}} euros</b></p></li>
-    				<li><p style="text-align: left"><b>disponible a partir du {{b.dateDispo|date: "dd"}} {{b.dateDispo|date: "MMMM"}} {{b.dateDispo|date: "yyyy"}}</b></p></li>
-    				<li><p style="text-align: left"><b>adresse : {{b.adresse.rue}}, {{b.adresse.codePostal}} {{b.adresse.ville}}</b></p></li>
-    			</ul>
-    		</div>
-    		<br>
-  		</li>
-	</ul>
+<h1 align="center" style="color: white;">Liste des client</h1> 
+<div class="container">
+	<div class="row col-md-6 col-md-offset-2 custyle"
+		style="margin: auto; width: 100%">
+		<table class="table table-bordered"
+			style="background-color: white; margin-top: 40px">
+			<tr>
+				<th style="text-align: center">ID</th>
+				<th style="text-align: center">Nom</th>
+				<th style="text-align: center">Prenom</th>
+				<th style="text-align: center">NumPrive</th>
+				<th style="text-align: center">Rue</th>
+				<th style="text-align: center">CodePostal</th>
+				<th style="text-align: center">Ville</th>
+			</tr>
+			<tr ng-repeat="customer in listeCustomer" style="text-align: center">
+				<td style="text-align: center">{{customer.id}}</td>
+				<td style="text-align: center">{{customer.nom}}</td>
+				<td style="text-align: center">{{customer.prenom}}</td>
+				<td style="text-align: center">{{customer.numPrive}}</td>
+				<td style="text-align: center">{{customer.adresse.rue}}</td>
+				<td style="text-align: center">{{customer.adresse.codePostal}}</td>
+				<td style="text-align: center">{{customer.adresse.ville}}</td>
+			</tr>
+		</table>
+	</div>
 </div>

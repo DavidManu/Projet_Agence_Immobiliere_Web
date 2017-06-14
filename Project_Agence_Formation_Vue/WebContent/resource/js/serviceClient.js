@@ -5,7 +5,7 @@ monApp
 
 					var restPropUrl = "http://localhost:8181/Projer_Agence_Formation/rest/clientWS/";
 
-					function findAllCustomer(id, callBack) {
+					function findAllCustomer(callBack) {
 
 						$http({
 							method : 'GET',

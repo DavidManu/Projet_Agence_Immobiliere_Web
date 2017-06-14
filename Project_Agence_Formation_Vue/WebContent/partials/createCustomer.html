@@ -1,95 +1,74 @@
-<h2>INFORMATIONS GENERALES</h2>
+<h1 align="center" style="color: white;">Formulaire d'ajout</h1>
 <br>
-
-<form>
-
-	<br>
-  
-  <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <label for="nom"><p>Nom du Client</p></label>
-    <input type="text" class="form-control" id="nom" placeholder="Nom du nouveau CLient" ng-model="CustomerForm.nom" >
-  </div>
-  <br>
-  <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <label for="prenom"><p>Prenom du Client</p></label>
-    <input type="text" class="form-control" id="prenom" placeholder="Prenom du nouveau CLient" ng-model="CustomerForm.prenom" >
-  </div>
-  <br>
-    <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <a>Adresse du client</a>
-  <br>
-  <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <label for="ville"><p>Ville du Client</p></label>
-    <input type="text" class="form-control" id="ville" placeholder="Ville du nouveau CLient" ng-model="CustomerForm.adresse.ville" >
-  </div>
-  <br>
-  <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <label for="codePostal"><p>Code Postal du Client</p></label>
-    <input type="text" class="form-control" id="codePostal" placeholder="Code Postal du nouveau CLient" ng-model="CustomerForm.adresse.codePostal" >
-  </div>
-  <br>
-  <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <label for="rue"><p>Rue du Client</p></label>
-    <input type="text" class="form-control" id="rue" placeholder="Rue du nouveau CLient" ng-model="CustomerForm.adresse.rue" >
-  </div>
- </div>
- <br>
- <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <label for="numPrive"><p>Numero du Client</p></label>
-    <input type="text" class="form-control" id="numPrive" placeholder="Numero du nouveau CLient" ng-model="CustomerForm.numPrive" >
-  </div>
-  
- <div id="div" class="control-group" style="border: 0px;background-color: none" >
-    <label class="control-label" for="type"><p>Type de Classe Standard que le client recherche</p></label>
-	  <div class="controls">
-		<select id="type" ng-model="CustomerForm.classeSt_id">
-		  <option value="terrain">Terrain à batir</option>
-		  <option value="location">Maison à louer</option>
-		  <option value="achat">Maison à acheter</option>
-		</select>
-	  </div>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="idNom" class="col-sm-2 control-label">Nom</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="idNom"
+				ng-model="CustomerForm.nom"
+				placeholder="Entrez le nom de la personne">
+		</div>
 	</div>
-	
-	<br>
-	<button type="submit" class="btn btn-default" style="margin-left: 10%" ng-click="infoSup()" >Informations disponibles</button>
-	
-<!--     <h2  ng-show='indice3' >ADRESSE</h2> -->
-<!--     <br> -->
-    
-<!--     <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' > -->
-<!--       <label for="rue"><p>Rue</p></label> -->
-<!--       <input type="text" class="form-control" id="rue" placeholder="Rue" ng-model="addPropertyForm.adresse.rue" > -->
-<!--     </div> -->
-    
-<!--     <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' > -->
-<!--       <label for="codepostal"><p>Code postal</p></label> -->
-<!--       <input type="text" class="form-control" id="codepostal" placeholder="Code postal" ng-model="addPropertyForm.adresse.codePostal" > -->
-<!--     </div> -->
-    
-<!--     <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' > -->
-<!--       <label for="ville"><p>Ville</p></label> -->
-<!--       <input type="text" class="form-control" id="ville" placeholder="Ville" ng-model="addPropertyForm.adresse.ville" > -->
-<!--     </div> -->
-	
-<!-- 	<br> -->
-<!--     <h2  ng-show='indice3' >DATES</h2> -->
-<!--     <br> -->
-    
-<!--     <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' > -->
-<!--       <label for="dispo"><p>Disponibilite</p></label> -->
-<!--       <input type="date" class="form-control" id="dispo" ng-model="addPropertyForm.dateDispo" > -->
-<!--     </div> -->
-    
-<!--     <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' > -->
-<!--       <label for="MEL"><p>Date de mise en ligne</p></label> -->
-<!--       <input type="date" class="form-control" id="MEL" ng-model="addPropertyForm.dateMEL" > -->
-<!--     </div> -->
-  
-  <br>
-  <button type="submit" class="btn btn-primary"  ng-show='indice3' style="margin-left: 10%" ng-click="createC()" >Ajouter</button>
-  <br>
-  <br>
-  <button type="reset" class="btn btn-warning"  ng-show='indice3' style="margin-left: 10%" >Effacer</button>
-  <p></p>
-  <br>
+	<div class="form-group">
+		<label for="idPrenom" class="col-sm-2 control-label">Prenom</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="idPrenom"
+				ng-model="CustomerForm.prenom"
+				placeholder="Entrez le prenom de la personne">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="idNumPrive" class="col-sm-2 control-label">NumPrive</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="idNumPrive"
+				ng-model="CustomerForm.numPrive"
+				placeholder="Entrez le numero prive de la personne">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="idRue" class="col-sm-2 control-label">Rue</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="idRue"
+				ng-model="CustomerForm.adresse.rue"
+				placeholder="Entrez la rue de la personne">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="idCP" class="col-sm-2 control-label">CodePostal</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="idCP"
+				ng-model="CustomerForm.adresse.codePostal"
+				placeholder="Entrez le code postal de la personne">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="idVille" class="col-sm-2 control-label">Ville</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="idVille"
+				ng-model="CustomerForm.adresse.ville"
+				placeholder="Entrez la ville de la personne">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="idConseiller" class="col-sm-2 control-label">IdClasseSt</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="idConseiller"
+				ng-model="CustomerForm.classeSt.id"
+				placeholder="Entrez l'id de la classe standard associée">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="idConseiller" class="col-sm-2 control-label">IdConseiller</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="idConseiller"
+				ng-model="CustomerForm.conseiller.id"
+				placeholder="Entrez l'id du conseiller">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button ng-click="modifier()" class="btn btn-success">Modifier</button>
+			<button type="reset" class="btn btn-danger">Reset</button>
+		</div>
+	</div>
 </form>
