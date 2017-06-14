@@ -1,8 +1,6 @@
 monApp.controller("findAllOwnerCtrl", function($scope, ownerProvider) {
 
-	$scope.id = undefined;
-
-	ownerProvider.findAllO($scope.id, function(callBack) {
+	ownerProvider.findAllO(function(callBack) {
 
 		$scope.listeOwner = callBack;
 	});
