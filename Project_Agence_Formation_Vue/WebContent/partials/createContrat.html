@@ -1,0 +1,50 @@
+<form class="form-horizontal" style="width: 40%; margin-left: 50px">
+	<div style="padding-top:20px">
+	
+	<div class="form-group">
+		<label for="dateSignature"><p>Date de signature</p></label>
+		<div>
+			<input type="text" id="dateSignature" ng-model="addContratForm.dateSignature">
+		</div>
+	</div>
+	
+	
+	
+	<div class="form-group">
+		<label for="refC">Reference du contrat</label>
+		<div>
+			<input type="text" id="refC" ng-model="addContratForm.refContrat">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="idBien">ID du bien</label>
+		<div>
+			<input type="text" id="idBien" ng-model="addContratForm.bien.id">
+		</div>
+	</div>
+
+	
+	
+	<div class="form-group">
+		<label for="idCon">ID duc onseiller</label>
+		<div>
+			<input type="text" id="idCon" ng-model="addContratForm.conseiller.id">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="idCl">ID du Client</label>
+		<div>
+			<input type="text" id="idCl" ng-model="addContratForm.client.id">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div>
+			<button class="btn btn-success" ng-click="addContrat()">Ajouter</button>
+			<button type="reset" class="btn btn-danger">Reset</button>
+		</div>
+	</div>
+	</div>
+</form>

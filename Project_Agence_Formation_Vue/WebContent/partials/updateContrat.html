@@ -1,0 +1,47 @@
+<form class="form-horizontal" style="width: 40%; margin-left: 50px">
+	<div style="padding-top:20px">
+	
+	<div class="form-group">
+		<label for="idContrat">ID Contrat</label>
+		<div>
+			<input type="text" id="idContrat" ng-model="updContratForm.id">
+		</div>
+	</div>
+	
+	
+	<div class="form-group">
+		<label for="dateSignature">Date de signature</label>
+		<div>
+			<input type="text" id="dateSignature" ng-model="updContratForm.dateSignature">
+		</div>
+	</div>
+
+<div class="form-group">
+		<label for="idB">ID du bien</label>
+		<div>
+			<input type="text" id="idB" ng-model="updContratForm.bien.id">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="idCl">ID du client</label>
+		<div>
+			<input type="text" id="idCl" ng-model="updContratForm.client.id">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="idCon">ID duc onseiller</label>
+		<div>
+			<input type="text" id="idCon" ng-model="updContratForm.conseiller.id">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div>
+			<button class="btn btn-success" ng-click="updContrat()">modifier</button>
+			<button type="reset" class="btn btn-danger">Reset</button>
+		</div>
+	</div>
+	</div>
+</form>

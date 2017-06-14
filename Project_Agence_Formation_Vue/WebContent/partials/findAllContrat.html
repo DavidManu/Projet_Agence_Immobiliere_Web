@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row col-md-6 col-md-offset-2 custyle"
+		style="margin: auto; width: 100%">
+		<table class="table table-bordered"
+			style="background-color: white; margin-top: 40px">
+			<tr>
+				<th style="text-align: center">ID</th>
+				<th style="text-align: center">Date de signature</th>
+		
+				
+			</tr>
+			<tr ng-repeat="c in listeContrat" style="text-align: center">
+				<td>{{c.id}}</td>
+				<td>{{c.dateSignature}}</td>
+				
+			</tr>
+		</table>
+	</div>
+</div>
