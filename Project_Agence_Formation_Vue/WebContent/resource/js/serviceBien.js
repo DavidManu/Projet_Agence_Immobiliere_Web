@@ -2,7 +2,7 @@ monApp.factory('biensProvider', function($http){
 	
 	var restUrl='http://localhost:8181/Projer_Agence_Formation/rest/bienWS/';
 	
-	var geoURL='https://maps.googleapis.com/maps/api/geocode/json?address=';
+//	var geoURL='https://maps.googleapis.com/maps/api/geocode/json?address=';
 	
 	function findAllProperty(calback){
 		$http({
@@ -31,7 +31,7 @@ monApp.factory('biensProvider', function($http){
 	function addProperty(property, calback){
 		$http({
 			method: 'POST',
-			url: restUrl+'addBien',
+			url: restUrl+'addBien/',
 			data: angular.toJson(property),
 			header: {
 				'content-Type':'application/json'

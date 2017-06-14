@@ -20,13 +20,45 @@ monApp
 })
 
 .controller('addPropertyController', function($scope, biensProvider, $location){
+	$scope.indice1=false;
+	$scope.indice2=false;
+	$scope.indice3=false;
 	$scope.addPropertyForm={
-		genre: "",
+		type: "",
 		superficie: 0,
-		photo: undefined
+		genre: undefined,
+		statut: "",
+		image: "",
+		cadastre: "",
+		prix: 0,
+		etat: "",
+		loyer: 0,
+		charges: 0,
+		caution: 0,
+		garniture: ""
+//		adresse: {
+//			rue: "",
+//			codePostal: "",
+//			ville
+//		},
+//		dateDispo: undefined,
+//		dateMEL: undefined
+		
 	};
+	$scope.infoSup=function(genre){
+		if (genre==1) {
+			$scope.indice1=true;
+			$scope.indice2=false;
+			$scope.indice3=true;
+		}
+		else {
+			$scope.indice1=false;
+			$scope.indice2=true;
+			$scope.indice3=true;
+		}
+	}
 	$scope.addProperty=function(){
-		biensProvider.createProperty($scope.addForm, function(calback){
+		biensProvider.createProperty($scope.addPropertyForm, function(calback){
 			if ((calback!=0)&&(calback!="")) {
 				$location.path('/findListProperty');
 			}
