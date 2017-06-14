@@ -31,7 +31,9 @@ monApp
 			conseillerAccepte:undefined,
 			Conseiller:{
 				id:undefined
+			}
 	};
+	
 	$scope.updVisite=function(){
 		visiteProvider.majVisite($scope.updVisiteForm,function(callBack){
 			if(callBack!=undefined && callBack!=''){

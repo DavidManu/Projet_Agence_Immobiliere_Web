@@ -13,7 +13,6 @@ monApp.factory('visiteProvider',function($http){
 			console.log("Erreur: "+response.status+" "+response.statusText);
 		});
 	}
-	
 	function addVisite(visiteAdd, callBack){
 		$http({
 			method: 'POST', 
