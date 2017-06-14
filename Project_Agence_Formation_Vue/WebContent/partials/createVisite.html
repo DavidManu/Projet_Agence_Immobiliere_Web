@@ -1,0 +1,38 @@
+<form class="form-horizontal" style="width: 40%; margin-left: 50px">
+	<div style="padding-top:20px"><div class="form-group">
+		<label for="clientA">ClientAccepteWtf</label>
+		<div>
+			<input type="text" id="clientA" ng-model="addVisiteForm.clientAccepte">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="conseillerA">ConseillerAccepteWtf</label>
+		<div>
+			<input type="text" id="conseillerA" ng-model="addVisiteForm.conseillerAccepte">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="dateVisite">Date de visite</label>
+		<div>
+			<input type="text" id="dateVisite" ng-model="addVisiteForm.dateVisite">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="idCon">Date de visite</label>
+		<div>
+			<input type="text" id="idCon" ng-model="addVisiteForm.conseiller.id">
+		</div>
+	</div>
+
+	
+	<div class="form-group">
+		<div>
+			<button class="btn btn-success" ng-click="addVisite()">Ajouter</button>
+			<button type="reset" class="btn btn-danger">Reset</button>
+		</div>
+	</div>
+	</div>
+</form>
