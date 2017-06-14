@@ -3,13 +3,13 @@ monApp
 				'CustomerProvider',
 				function($http) {
 
-					var restPropUrl = "http://localhost:8181/Projer_Agence_Formation/rest/clientWS/";
+					var restPropUrl = "http://localhost:8181/Projer_Agence_Formation/rest/clientWS";
 
 					function findAllCustomer(callBack) {
 
 						$http({
 							method : 'GET',
-							url : restPropUrl + 'liste2' 
+							url : restPropUrl + '/liste2' 
 						}).then(function successCallBack(response) {
 
 							console.log(response.data)
@@ -25,7 +25,7 @@ monApp
 					function findCustomer(id, callBack) {
 						$http({
 							method : 'GET',
-							url : restPropUrl + "prop/" + id
+							url : restPropUrl + "/Client/" + id
 
 						}).then(function successCallBack(response) {
 
@@ -42,7 +42,7 @@ monApp
 					function deleteCustomer(id, callBack) {
 						$http({
 							method : 'DELETE',
-							url : restPropUrl + "delete/" + id
+							url : restPropUrl + "/supprimer/" + id
 
 						}).then(function successCallBack(response) {
 
@@ -59,7 +59,7 @@ monApp
 					function createCustomer(CustomerCreate, callBack) {
 						$http({
 							method : 'POST',
-							url : restPropUrl + 'add',
+							url : restPropUrl + '/ajout',
 							data : angular.toJson(CustomerCreate),
 							headers : {
 								'content-Type' : 'application/json'
@@ -80,7 +80,7 @@ monApp
 					function updateCustomer(CustomerUpdate, callBack) {
 						$http({
 							method : 'PUT',
-							url : restPropUrl + 'update',
+							url : restPropUrl + '/modif',
 							data : angular.toJson(CustomerUpdate),
 							headers : {
 								'content-Type' : 'application/json'
