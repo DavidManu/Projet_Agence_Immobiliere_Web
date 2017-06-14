@@ -1,8 +1,6 @@
 monApp.controller("findAllOwnerCtrl", function($scope, ownerProvider) {
 
-	$scope.id = undefined;
-
-	ownerProvider.findAllO($scope.id, function(callBack) {
+	ownerProvider.findAllO(function(callBack) {
 
 		$scope.listeOwner = callBack;
 	});
@@ -21,7 +19,7 @@ monApp.controller("findOwnerCtrl", function($scope, ownerProvider, $location) {
 				$scope.indice = true;
 				$scope.owner_rec = callBack;
 			} else {
-				$scope.indice = false;
+				$scope.indice = false; 
 			}
 		});
 

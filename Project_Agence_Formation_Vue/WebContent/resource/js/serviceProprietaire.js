@@ -2,11 +2,11 @@ monApp.factory('ownerProvider', function($http) {
 	
 	var restPropUrl = "http://localhost:8181/Projer_Agence_Formation/rest/propWS";
 
-	function findAllOwner(id,callBack) {
+	function findAllOwner(callBack) {
 
 		$http({
 			method : 'GET',
-			url : restPropUrl + '/liste?pId='+id
+			url : restPropUrl + '/liste2',
 		}).then(function successCallBack(response) {
 
 			console.log(response.data)
@@ -18,11 +18,11 @@ monApp.factory('ownerProvider', function($http) {
 					+ response.statusText);
 		}
 
-	}
+	} 
 	function findOwner(id,callBack) {
 		$http({
 			method : 'GET',
-			url : restPropUrl + "/prop/"+ id
+			url : restPropUrl + "/prop/"+ id,
 						
 		}).then(function successCallBack(response) {
 
@@ -39,7 +39,7 @@ monApp.factory('ownerProvider', function($http) {
 	}function deleteOwner(id,callBack) {
 		$http({
 			method : 'DELETE',
-			url : restPropUrl + "/delete/"+ id
+			url : restPropUrl + "/delete/"+ id,
 			
 		}).then(function successCallBack(response) {
 
