@@ -1,0 +1,23 @@
+<h2>AJOUTER UNE PROPRIETE</h2>
+<br>
+<form>
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="genre"><p>Genre</p></label>
+    <input type="text" class="form-control" id="genre" placeholder="Genre" ng-model="addPropertyForm.genre" >
+  </div>
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="superficie"><p>Genre</p></label>
+    <input type="number" class="form-control" id="superficie" placeholder="superficie" ng-model="addPropertyForm.superficie" >
+  </div>
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="photo"><p>Photo</p></label>
+    <input type="file" class="form-control" id="photo" ng-model="addPropertyForm.photo" >
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary" style="margin-left: 20%" ng-click="addProperty()" >ajouter</button>
+  <br>
+  <br>
+  <button type="reset" class="btn btn-warning" style="margin-left: 20%" >effacer</button>
+  <p></p>
+  <br>
+</form>

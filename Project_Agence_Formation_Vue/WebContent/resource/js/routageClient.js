@@ -1,0 +1,3 @@
+monApp.config(function ($routeProvider) {
+	
+})

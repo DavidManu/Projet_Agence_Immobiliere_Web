@@ -1,0 +1,44 @@
+p {
+    margin-left: 3%;
+    font-family: Verdana, sans-serif;
+    color: white;
+    text-align: center;
+}
+#div {
+    border: 2px solid black;
+    background-color: #424242;
+    width: 80%;
+    margin-left: 10%;
+    opacity: 0.65;
+}
+h2 {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    color: white;
+}
+button {
+    margin-left: 3%;
+}
+table {
+    margin-left: 3%;
+    border-collapse: collapse;
+    background-color: white;
+    width: 40%;
+}
+/* table, th, td { */
+/*     border: 1px solid black; */
+/*     text-align: center; */
+/*     font-family: Verdana, sans-serif; */
+/* } */
+.button1 {
+    margin-left: 0%;
+}
+body {
+    background-image: url("../images/wallhaven-494998.jpg");
+    background-attachment: fixed;
+	background-size: 100%;
+}
+
+.map {
+    borde: 0px;
+}
