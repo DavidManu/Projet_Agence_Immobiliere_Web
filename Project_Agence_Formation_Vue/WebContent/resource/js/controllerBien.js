@@ -43,10 +43,10 @@ monApp
 		},
 		dateDispo: undefined,
 		dateMEL: undefined
-		
 	};
 	$scope.infoSup=function(genre){
-		if (genre=true) {
+		genre=$scope.addPropertyForm.genre;
+		if (genre==1) {
 			$scope.indice1=true;
 			$scope.indice2=false;
 			$scope.indice3=true;
