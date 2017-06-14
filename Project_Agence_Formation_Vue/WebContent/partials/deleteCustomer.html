@@ -1,0 +1,17 @@
+<h1 align="center" style="color: white;">Formulaire de suppression</h1>
+<br>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="ID" class="col-sm-2 control-label">ID</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="ID" ng-model="id"
+				placeholder="Entrez ID">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button ng-click="supprimer()" class="btn btn-success">Supprimer</button>
+			<button type="reset" class="btn btn-danger">Reset</button>
+		</div>
+	</div>
+</form>
