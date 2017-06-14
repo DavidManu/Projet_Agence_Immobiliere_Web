@@ -18,7 +18,7 @@ monApp.factory('ownerProvider', function($http) {
 					+ response.statusText);
 		}
 
-	}
+	} 
 	function findOwner(id,callBack) {
 		$http({
 			method : 'GET',

@@ -19,7 +19,7 @@ monApp.controller("findOwnerCtrl", function($scope, ownerProvider, $location) {
 				$scope.indice = true;
 				$scope.owner_rec = callBack;
 			} else {
-				$scope.indice = false;
+				$scope.indice = false; 
 			}
 		});
 
