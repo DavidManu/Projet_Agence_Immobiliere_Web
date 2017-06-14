@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<h1 align="center">Formulaire de recherche</h1>
 
-</body>
-</html>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="ID" class="col-sm-2 control-label">ID</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" id="ID" ng-model="id"
+				placeholder="Entrez ID">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button ng-click="rechercher()" class="btn btn-success">Rechercher</button>
+			<button type="reset" class="btn btn-danger">Reset</button>
+		</div>
+	</div>
+</form>
+
+<table class="table table-bordered" ng-show="indice">
+	<tr>
+		<th style="text-align: center">ID</th>
+		<th style="text-align: center">Nom</th>
+		<th style="text-align: center">Prenom</th>
+		<th style="text-align: center">NumPrive</th>
+		<th style="text-align: center">NumTravail</th>
+		<th style="text-align: center">Rue</th>
+		<th style="text-align: center">CodePostal</th>
+		<th style="text-align: center">Ville</th>
+	</tr>
+	<tr>
+		<td style="text-align: center">{{owner_rec.id}}</td>
+		<td style="text-align: center">{{owner_rec.nom}}</td>
+		<td style="text-align: center">{{owner_rec.prenom}}</td>
+		<td style="text-align: center">{{owner_rec.numPrive}}</td>
+		<td style="text-align: center">{{owner_rec.numTravail}}</td>
+		<td style="text-align: center">{{owner_rec.adresse.rue}}</td>
+		<td style="text-align: center">{{owner_rec.adresse.codePostal}}</td>
+		<td style="text-align: center">{{owner_rec.adresse.ville}}</td>
+	</tr>
+
+</table>
+

@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<h1 align="center">Liste des proprietaires</h1>
 
-</body>
-</html>
+<table class="table table-bordered">
+	<tr>
+		<th style="text-align: center">ID</th>
+		<th style="text-align: center">Nom</th>
+		<th style="text-align: center">Prenom</th>
+		<th style="text-align: center">NumPrive</th>
+		<th style="text-align: center">NumTravail</th>
+		<th style="text-align: center">Rue</th>
+		<th style="text-align: center">CodePostal</th>
+		<th style="text-align: center">Ville</th>
+	</tr>
+	<tr ng-repeat="owner in listeOwner | filter:recherche">
+		<td style="text-align: center">{{owner.id}}</td>
+		<td style="text-align: center">{{owner.nom}}</td>
+		<td style="text-align: center">{{owner.prenom}}</td>
+		<td style="text-align: center">{{owner.numPrive}}</td>
+		<td style="text-align: center">{{owner.numTel}}</td>
+		<td style="text-align: center">{{owner.adresse.rue}}</td>
+		<td style="text-align: center">{{owner.adresse.codePostal}}</td>
+		<td style="text-align: center">{{owner.adresse.ville}}</td>
+	</tr>
+</table>

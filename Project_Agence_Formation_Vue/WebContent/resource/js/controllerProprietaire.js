@@ -1,8 +1,8 @@
 monApp.controller("findAllOwnerCtrl", function($scope, ownerProvider) {
-	
+
 	$scope.id = undefined;
-	
-	ownerProvider.findAllO($scope.id,function(callBack) {
+
+	ownerProvider.findAllO($scope.id, function(callBack) {
 
 		$scope.listeOwner = callBack;
 	});
@@ -53,11 +53,11 @@ monApp.controller("createOwnerCtrl",
 			$scope.ownerForm = {
 				nom : "",
 				prenom : "",
-				age : undefined,
-				mail : undefined,
+				numPrive : "",
+				numTravail : "",
 				adresse : {
 					rue : "",
-					cp : "",
+					codePostal : "",
 					ville : ""
 				}
 			}
@@ -82,11 +82,11 @@ monApp.controller("updateOwnerCtrl",
 				id : undefined,
 				nom : "",
 				prenom : "",
-				age : undefined,
-				mail : undefined,
+				numPrive : "",
+				numTravail : "",
 				adresse : {
 					rue : "",
-					cp : "",
+					codePostal : "",
 					ville : ""
 				}
 			}
