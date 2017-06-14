@@ -1,19 +1,22 @@
 <div class="container">
-    <div class="row col-md-6 col-md-offset-2 custyle"; style="margin:auto; width: 100%">
-<table class="table table-bordered" style="background-color: white;margin-top:40px">
-<tr>
-<th style="text-align: center">ID</th>
-<th style="text-align: center">Date de visite</th>
-<th style="text-align: center">Client accepte what</th>
-<th style="text-align: center">Conseiller accepte what</th>
-</tr>
-<tr ng-repeat="v in listeVisite" style="text-align: center">
-<td>{{v.id}}</td>
-<td>{{v.dateVisite}}</td>
-<td>{{v.clientAccepte}}</td>
-<td>{{v.conseillerAccepte}}</td>
+	<div class="row col-md-6 col-md-offset-2 custyle"
+		style="margin: auto; width: 100%">
+		<table class="table table-bordered"
+			style="background-color: white; margin-top: 40px">
+			<tr>
+				<th style="text-align: center">ID</th>
+				<th style="text-align: center">Date de visite</th>
+				<th style="text-align: center">Client accepte what</th>
+				<th style="text-align: center">Conseiller accepte what</th>
+			</tr>
+			<tr ng-repeat="v in listeVisite" style="text-align: center">
+				<td>{{v.id}}</td>
+				<td>{{v.dateVisite}}</td>
+				<td>{{v.clientAccepte}}</td>
+				<td>{{v.conseillerAccepte}}</td>
 
 
-</tr>
-</table>
-</div></div>
+			</tr>
+		</table>
+	</div>
+</div>

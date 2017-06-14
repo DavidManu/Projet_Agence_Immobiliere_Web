@@ -1,0 +1,44 @@
+<form class="form-horizontal" style="margin-top: 0">
+	<div style="padding-top: 50px; padding-left: 50px; width: 100%">
+		<div class="form-group">
+			<label for="idVisite" class="col-sm-2 control-label">ID</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="idVisite" ng-model="id"
+					placeholder="Entrez l'Id de la visite">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-6">
+				<button class="btn btn-success" ng-click="getByIdVisite()">Rechercher</button>
+				<button type="reset" class="btn btn-danger">Reset</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<div ng-show="indice">
+	<div class="container">
+		<div class="row col-md-6 col-md-offset-2 custyle"
+			; style="margin: auto; width: 100%">
+			<table class="table table-bordered"
+				style="background-color: white; margin-top: 40px">
+				<tr>
+					<th style="text-align: center">ID</th>
+					<th style="text-align: center">Date de visite</th>
+					<th style="text-align: center">Client accepte what</th>
+					<th style="text-align: center">Conseiller accepte what</th>
+				</tr>
+
+				<tr>
+					<td style="text-align: center">{{visiteRec.id}}</td>
+					<td style="text-align: center">{{visiteRec.dateVisite}}</td>
+					<td style="text-align: center">{{visiteRec.clientAccepte}}</td>
+					<td style="text-align: center">{{visiteRec.conseillerAccepte}}</td>
+
+
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

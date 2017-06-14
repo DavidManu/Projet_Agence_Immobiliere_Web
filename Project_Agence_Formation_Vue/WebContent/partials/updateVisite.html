@@ -1,0 +1,46 @@
+<form class="form-horizontal" style="width: 40%; margin-left: 50px">
+	<div style="padding-top:20px">
+	
+	<div class="form-group">
+		<label for="idVisit">ID Visite</label>
+		<div>
+			<input type="text" id="idVisit" ng-model="updVisiteForm.id">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="clientA">ClientAccepteWtf</label>
+		<div>
+			<input type="text" id="clientA" ng-model="updVisiteForm.clientAccepte">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="conseillerA">ConseillerAccepteWtf</label>
+		<div>
+			<input type="text" id="conseillerA" ng-model="updVisiteForm.conseillerAccepte">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="dateVisite">Date de visite</label>
+		<div>
+			<input type="text" id="dateVisite" ng-model="updVisiteForm.dateVisite">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="idCon">ID duc onseiller</label>
+		<div>
+			<input type="text" id="idCon" ng-model="updVisiteForm.conseiller.id">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div>
+			<button class="btn btn-success" ng-click="updVisite()">modifier</button>
+			<button type="reset" class="btn btn-danger">Reset</button>
+		</div>
+	</div>
+	</div>
+</form>

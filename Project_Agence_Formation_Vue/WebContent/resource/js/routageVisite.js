@@ -7,17 +7,17 @@ monApp.config(function ($routeProvider) {
 		controller: 'addVisiteController',
 		templateUrl: 'partials/createVisite.html'
 	})
-	.when('/updateVisite', {
+	.when('/updateVisit', {
 		controller: 'updateVisiteController',
 		templateUrl: 'partials/updateVisite.html'
 	})
-	.when('/deleteVisite', {
+	.when('/deleteVisit', {
 		controller: 'deleteVisiteController',
 		templateUrl: 'partials/deleteVisite.html'
 	})
-	.when('/findVisiteByID', {
+	.when('/findVisit', {
 		controller: 'getVisiteByIDController',
-		templateUrl: 'partials/getVisiteByID.html'
+		templateUrl: 'partials/findVisite.html'
 	})
 	.otherwise({
 		redirectTo: '/findListVisite'

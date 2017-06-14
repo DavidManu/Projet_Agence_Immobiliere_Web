@@ -45,11 +45,36 @@ monApp.factory('visiteProvider',function($http){
 		})
 	}
 	
+	function deleteVisite(id,callBack){
+		$http({
+			method:'DELETE',
+			url:restVisiteUrl+'supprimer/'+id
+		}).then(function successCallBack(response){
+			console.log(response);
+			callBack(response);
+		},function echecCallBack(response){
+			console.log("Erreur: "+response.status+" "+response.statusText)
+		});
+	}
+	
+	function findVisite(id,callBack){
+		$http({
+			method:'GET',
+			url:restVisiteUrl+'visite/'+id
+		}).then(function successCallBack(response) {
+			console.log(response.data);
+			callBack(response.data);
+		},function echecCallBack(response) {
+			console.log("Erreur: "+response.status+" "+response.statusText);
+		});
+	}
 	
 	return {
 		getListVisite:findAllVisite,
 		createVisite:addVisite,
-		majVisite:updateVisite
+		majVisite:updateVisite,
+		delVisite:deleteVisite,
+		getVisiteById:findVisite
 	};
 	
 })

@@ -42,3 +42,30 @@ monApp
 		});
 	}
 })
+
+.controller("deleteVisiteController",function($scope,visiteProvider,$location){
+	$scope.id=undefined;
+$scope.delVisite=function(){
+	visiteProvider.delVisite($scope.id,function(callBack){
+		if(callBack!=undefined && callBack!=''){
+			$location.path('/listOfVisits');
+		}
+	})
+}
+})
+	
+.controller('getVisiteByIDController',function($scope,visiteProvider,$location,$rootScope){
+	$scope.id=undefined;
+	$scope.indice=false;
+	
+	$scope.getByIdVisite=function(){
+		visiteProvider.getVisiteById($scope.id,function(callBack){
+			if(callBack!=undefined && callBack!=''){
+				$scope.indice=true;
+				$scope.visiteRec=callBack;
+			}else{
+				$scope.indice=false;
+			}
+		})
+	}
+})
