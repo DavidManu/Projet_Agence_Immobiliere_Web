@@ -1,6 +1,6 @@
 monApp.factory('ownerProvider', function($http) {
 	
-	var restPropUrl = "http://localhost:8181/Projer_Agence_Formation/rest/propWS/";
+	var restPropUrl = "http://localhost:8181/Projer_Agence_Formation/rest/propWS";
 
 	function findAllOwner(id,callBack) {
 
