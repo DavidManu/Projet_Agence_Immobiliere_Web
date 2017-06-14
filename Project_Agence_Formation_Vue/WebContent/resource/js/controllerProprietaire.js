@@ -19,7 +19,7 @@ monApp.controller("findOwnerCtrl", function($scope, ownerProvider, $location) {
 				$scope.indice = true;
 				$scope.owner_rec = callBack;
 			} else {
-				$scope.indice = false; 
+				$scope.indice = false;
 			}
 		});
 
@@ -57,6 +57,10 @@ monApp.controller("createOwnerCtrl",
 					rue : "",
 					codePostal : "",
 					ville : ""
+				},
+				conseiller : {
+					id : undefined
+
 				}
 			}
 
@@ -86,6 +90,10 @@ monApp.controller("updateOwnerCtrl",
 					rue : "",
 					codePostal : "",
 					ville : ""
+				},
+				conseiller : {
+					id : undefined
+
 				}
 			}
 			$scope.modifier = function() {
