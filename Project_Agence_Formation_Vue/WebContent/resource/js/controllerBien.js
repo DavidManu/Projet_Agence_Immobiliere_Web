@@ -35,18 +35,18 @@ monApp
 		loyer: 0,
 		charges: 0,
 		caution: 0,
-		garniture: ""
-//		adresse: {
-//			rue: "",
-//			codePostal: "",
-//			ville
-//		},
-//		dateDispo: undefined,
-//		dateMEL: undefined
+		garniture: "",
+		adresse: {
+			rue: "",
+			codePostal: "",
+			ville
+		},
+		dateDispo: undefined,
+		dateMEL: undefined
 		
 	};
 	$scope.infoSup=function(genre){
-		if (genre==1) {
+		if (genre=true) {
 			$scope.indice1=true;
 			$scope.indice2=false;
 			$scope.indice3=true;
