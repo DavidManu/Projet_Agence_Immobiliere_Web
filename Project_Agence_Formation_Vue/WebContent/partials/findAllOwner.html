@@ -1,6 +1,6 @@
-<h1 align="center">Liste des proprietaires</h1>
-
-<table class="table table-bordered">
+<h1 align="center" style="color: white;">Liste des proprietaires</h1>
+<br>
+<table class="table table-bordered" style="align:center;">
 	<tr>
 		<th style="text-align: center">ID</th>
 		<th style="text-align: center">Nom</th>
@@ -11,7 +11,7 @@
 		<th style="text-align: center">CodePostal</th>
 		<th style="text-align: center">Ville</th>
 	</tr>
-	<tr ng-repeat="owner in listeOwner | filter:recherche">
+	<tr ng-repeat="owner in listeOwner">
 		<td style="text-align: center">{{owner.id}}</td>
 		<td style="text-align: center">{{owner.nom}}</td>
 		<td style="text-align: center">{{owner.prenom}}</td>
