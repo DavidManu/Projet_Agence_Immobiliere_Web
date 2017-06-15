@@ -20,6 +20,6 @@ monApp.config(function ($routeProvider) {
 		templateUrl: 'partials/findContrat.html'
 	})
 	.otherwise({
-		redirectTo: '/listOfContracts'
+		redirectTo: '/listOfProperty'
 	});
 })

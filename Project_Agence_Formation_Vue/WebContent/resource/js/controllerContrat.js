@@ -4,6 +4,26 @@ monApp
 	contratProvider.getListContrat(function(callBack){
 		$scope.listeContrat=callBack;
 	});
+	
+	$scope.deleteLien=function(id){
+		console.log($scope.id)
+		visiteProvider.delContrat(id,function(callBack){
+			
+			if(callBack!=undefined && callBack!=''){
+				contratProvider.getListContrat(function(callBack){
+					$scope.listeContrat=callBack;
+				});
+			}
+		});
+	}
+	
+	$scope.modifLien=function(contrat){
+		$rootScope.contratMod=contrat;
+		console.log($rootScope.contratMod);
+		$location.path('/updateContract');
+	}
+	
+	
 })
 
 .controller('addContratController', function($scope, contratProvider, $location){
@@ -30,6 +50,7 @@ monApp
 })
 
 .controller('updateContratController', function($scope,contratProvider,$location,$rootScope){
+	if($rootScope.contratMod==null){
 	$scope.updContratForm={
 			dateSignature:undefined,
 			refContrat:undefined,
@@ -42,7 +63,10 @@ monApp
 			Conseiller:{
 				id:undefined
 			}
-	};
+	}
+	}else{
+		
+	}
 	
 	$scope.updContrat=function(){
 		contratProvider.majContrat($scope.updContratForm,function(callBack){
