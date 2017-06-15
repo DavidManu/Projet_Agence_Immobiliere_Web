@@ -2,112 +2,123 @@
 <html>
 
 <head>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy1ZKI7FhtHYJx8VEB0GQyjcUoxc2nwy4"></script>
-	<script type="text/javascript" src="resource/bootstrap/jquery-3.2.1.js"></script>
-	<script type="text/javascript" src="resource/bootstrap/bootstrap.js"></script>
-	<link rel="stylesheet" type="text/css" href="resource/bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="resource/bootstrap/bootstrap-theme.css">
-	<script type="text/javascript" src="resource/angularJS/angular.js"></script>
-	<script type="text/javascript" src="/resource/angularJS/videojs.js"></script>
-	<script type="text/javascript" src="resource/angularJS/angular-locale_fr-fr.js"></script>
-	<script type="text/javascript" src="resource/angularJS/angular-route.js"></script>
-	<script type="text/javascript" src="resource/angularJS/ng-file-upload.js"></script>
-	<script type="text/javascript" src="resource/js/app.js"></script>
-	<script type="text/javascript" src="resource/js/routageProprietaire.js"></script>
-	<script type="text/javascript" src="resource/js/routageConseiller.js"></script>
-	<script type="text/javascript" src="resource/js/routageCS.js"></script>
-	<script type="text/javascript" src="resource/js/routageBien.js"></script>
-	<script type="text/javascript" src="resource/js/routageClient.js"></script>
-	<script type="text/javascript" src="resource/js/routageContrat.js"></script>
-	<script type="text/javascript" src="resource/js/routageVisite.js"></script>
-	<script type="text/javascript" src="resource/js/serviceProprietaire.js"></script>
-	<script type="text/javascript" src="resource/js/serviceConseiller.js"></script>
-	<script type="text/javascript" src="resource/js/serviceCS.js"></script>
-	<script type="text/javascript" src="resource/js/serviceBien.js"></script>
-	<script type="text/javascript" src="resource/js/serviceClient.js"></script>
-	<script type="text/javascript" src="resource/js/serviceContrat.js"></script>
-	<script type="text/javascript" src="resource/js/serviceVisite.js"></script>
-	<script type="text/javascript" src="resource/js/controllerProprietaire.js"></script>
-	<script type="text/javascript" src="resource/js/controllerConseiller.js"></script>
-	<script type="text/javascript" src="resource/js/controllerCS.js"></script>
-	<script type="text/javascript" src="resource/js/controllerBien.js"></script>
-	<script type="text/javascript" src="resource/js/controllerClient.js"></script>
-	<script type="text/javascript" src="resource/js/controllerContrat.js"></script>
-	<script type="text/javascript" src="resource/js/controllerVisite.js"></script>
-	<link rel="stylesheet" type="text/css" href="resource/css/miseEnPage.css">
-	<meta charset="ISO-8859-1">
-	<title>accueil</title>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy1ZKI7FhtHYJx8VEB0GQyjcUoxc2nwy4"></script>
+<script type="text/javascript" src="resource/bootstrap/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="resource/bootstrap/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="resource/bootstrap/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="resource/bootstrap/bootstrap-theme.css">
+<script type="text/javascript" src="resource/angularJS/angular.js"></script>
+<script type="text/javascript" src="/resource/angularJS/videojs.js"></script>
+<script type="text/javascript"
+	src="resource/angularJS/angular-locale_fr-fr.js"></script>
+<script type="text/javascript" src="resource/angularJS/angular-route.js"></script>
+<script type="text/javascript"
+	src="resource/angularJS/ng-file-upload.js"></script>
+<script type="text/javascript" src="resource/js/app.js"></script>
+<script type="text/javascript" src="resource/js/routageProprietaire.js"></script>
+<script type="text/javascript" src="resource/js/routageConseiller.js"></script>
+<script type="text/javascript" src="resource/js/routageCS.js"></script>
+<script type="text/javascript" src="resource/js/routageBien.js"></script>
+<script type="text/javascript" src="resource/js/routageClient.js"></script>
+<script type="text/javascript" src="resource/js/routageContrat.js"></script>
+<script type="text/javascript" src="resource/js/routageVisite.js"></script>
+<script type="text/javascript" src="resource/js/serviceProprietaire.js"></script>
+<script type="text/javascript" src="resource/js/serviceConseiller.js"></script>
+<script type="text/javascript" src="resource/js/serviceCS.js"></script>
+<script type="text/javascript" src="resource/js/serviceBien.js"></script>
+<script type="text/javascript" src="resource/js/serviceClient.js"></script>
+<script type="text/javascript" src="resource/js/serviceContrat.js"></script>
+<script type="text/javascript" src="resource/js/serviceVisite.js"></script>
+<script type="text/javascript"
+	src="resource/js/controllerProprietaire.js"></script>
+<script type="text/javascript" src="resource/js/controllerConseiller.js"></script>
+<script type="text/javascript" src="resource/js/controllerCS.js"></script>
+<script type="text/javascript" src="resource/js/controllerBien.js"></script>
+<script type="text/javascript" src="resource/js/controllerClient.js"></script>
+<script type="text/javascript" src="resource/js/controllerContrat.js"></script>
+<script type="text/javascript" src="resource/js/controllerVisite.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="resource/css/miseEnPage.css">
+<meta charset="ISO-8859-1">
+<title>accueil</title>
 </head>
 
-<body ng-app="monApp" >
+<body ng-app="monApp" ng-controller="monC">
+	<div ng-include="'partials/Template/header.html'"></div>
 
 	<nav ng-hide=indiceCo class="navbar navbar-inverse">
-  		<ul class="nav navbar-nav" >
- 			<li role="presentation" class="active"><a href="#">accueil</a></li>
- 			<li role="presentation"><a href="#!connexion">connexion</a></li>
+		<ul class="nav navbar-nav">
+			<li role="presentation" class="active"><a href="#">accueil</a></li>
+			<li role="presentation"><a href="#!connexion">connexion</a></li>
 		</ul>
 	</nav>
 
 	<nav ng-show=indiceCo class="navbar navbar-inverse">
-  		<ul class="nav navbar-nav" >
- 			<li role="presentation" class="active"><a href="#">accueil</a></li>
- 			<li role="presentation"><a href="#!connexion">deconnexion</a></li>
-  			<li class="dropdown">
-	  			<a class="dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span> proprietaires</a>
-		  			<ul class="dropdown-menu" style="background-color: #424242">
-					    <li><a href="#!listOfOwners" style="color: #A4A4A4" >liste</a></li>
-					    <li><a href="#!findOwner" style="color: #A4A4A4" >rechercher</a></li>
-					    <li><a href="#!createOwner" style="color: #A4A4A4" >ajouter</a></li>
-					    <li><a href="#!updateOwner" style="color: #A4A4A4" >modifier</a></li>
-					    <li><a href="#!deleteOwner" style="color: #A4A4A4" >supprimer</a></li>
-		  			</ul>
-		  	</li>
-		  	<li class="dropdown">
-	  			<a class="dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span> proprietes</a>
-		  			<ul class="dropdown-menu" style="background-color: #424242">
-					    <li><a href="#!listOfProperty" style="color: #A4A4A4" >liste</a></li>
-					    <li><a href="#!findProperty" style="color: #A4A4A4" >rechercher</a></li>
-					    <li><a href="#!createProperty" style="color: #A4A4A4" >ajouter</a></li>
-					    <li><a href="#!updateProperty" style="color: #A4A4A4" >modifier</a></li>
-					    <li><a href="#!deleteProperty" style="color: #A4A4A4" >supprimer</a></li>
-		  			</ul>
-		  	</li>
-		  	<li class="dropdown">
-	  			<a class="dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span> clients</a>
-		  			<ul class="dropdown-menu" style="background-color: #424242">
-					    <li><a href="#!listOfCustomers" style="color: #A4A4A4" >liste</a></li>
-					    <li><a href="#!findCustomer" style="color: #A4A4A4" >rechercher</a></li>
-					    <li><a href="#!createCustomer" style="color: #A4A4A4" >ajouter</a></li>
-					    <li><a href="#!updateCustomer" style="color: #A4A4A4" >modifier</a></li>
-					    <li><a href="#!deleteCustomer" style="color: #A4A4A4" >supprimer</a></li>
-		  			</ul>
-		  	</li>
-		  	<li class="dropdown">
-	  			<a class="dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span> contrats</a>
-		  			<ul class="dropdown-menu" style="background-color: #424242">
-					    <li><a href="#!listOfContracts" style="color: #A4A4A4" >liste</a></li>
-					    <li><a href="#!findContract" style="color: #A4A4A4" >rechercher</a></li>
-					    <li><a href="#!createContract" style="color: #A4A4A4" >ajouter</a></li>
-					    <li><a href="#!updateContract" style="color: #A4A4A4" >modifier</a></li>
-					    <li><a href="#!deleteContract" style="color: #A4A4A4" >supprimer</a></li>
-		  			</ul>
-		  	</li>
-		  	<li class="dropdown">
-	  			<a class="dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span> visites</a>
-		  			<ul class="dropdown-menu" style="background-color: #424242">
-					    <li><a href="#!listOfVisits" style="color: #A4A4A4" >liste</a></li>
-					    <li><a href="#!findVisit" style="color: #A4A4A4" >rechercher</a></li>
-					    <li><a href="#!createVisit" style="color: #A4A4A4" >ajouter</a></li>
-					    <li><a href="#!updateVisit" style="color: #A4A4A4" >modifier</a></li>
-					    <li><a href="#!deleteVisit" style="color: #A4A4A4" >supprimer</a></li>
-		  			</ul>
-		  	</li>
+		<ul class="nav navbar-nav">
+			<li role="presentation" class="active"><a href="#">accueil</a></li>
+			<li role="presentation"><a href="#!connexion">deconnexion</a></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown"><span class="caret"></span> proprietaires</a>
+				<ul class="dropdown-menu" style="background-color: #424242">
+					<li><a href="#!listOfOwners" style="color: #A4A4A4">liste</a></li>
+					<li><a href="#!findOwner" style="color: #A4A4A4">rechercher</a></li>
+					<li><a href="#!createOwner" style="color: #A4A4A4">ajouter</a></li>
+					<li><a href="#!updateOwner" style="color: #A4A4A4">modifier</a></li>
+					<li><a href="#!deleteOwner" style="color: #A4A4A4">supprimer</a></li>
+				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown"><span class="caret"></span> proprietes</a>
+				<ul class="dropdown-menu" style="background-color: #424242">
+					<li><a href="#!listOfProperty" style="color: #A4A4A4">liste</a></li>
+					<li><a href="#!findProperty" style="color: #A4A4A4">rechercher</a></li>
+					<li><a href="#!createProperty" style="color: #A4A4A4">ajouter</a></li>
+					<li><a href="#!updateProperty" style="color: #A4A4A4">modifier</a></li>
+					<li><a href="#!deleteProperty" style="color: #A4A4A4">supprimer</a></li>
+				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown"><span class="caret"></span> clients</a>
+				<ul class="dropdown-menu" style="background-color: #424242">
+					<li><a href="#!listOfCustomers" style="color: #A4A4A4">liste</a></li>
+					<li><a href="#!findCustomer" style="color: #A4A4A4">rechercher</a></li>
+					<li><a href="#!createCustomer" style="color: #A4A4A4">ajouter</a></li>
+					<li><a href="#!updateCustomer" style="color: #A4A4A4">modifier</a></li>
+					<li><a href="#!deleteCustomer" style="color: #A4A4A4">supprimer</a></li>
+				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown"><span class="caret"></span> contrats</a>
+				<ul class="dropdown-menu" style="background-color: #424242">
+					<li><a href="#!listOfContracts" style="color: #A4A4A4">liste</a></li>
+					<li><a href="#!findContract" style="color: #A4A4A4">rechercher</a></li>
+					<li><a href="#!createContract" style="color: #A4A4A4">ajouter</a></li>
+					<li><a href="#!updateContract" style="color: #A4A4A4">modifier</a></li>
+					<li><a href="#!deleteContract" style="color: #A4A4A4">supprimer</a></li>
+				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown"><span class="caret"></span> visites</a>
+				<ul class="dropdown-menu" style="background-color: #424242">
+					<li><a href="#!listOfVisits" style="color: #A4A4A4">liste</a></li>
+					<li><a href="#!findVisit" style="color: #A4A4A4">rechercher</a></li>
+					<li><a href="#!createVisit" style="color: #A4A4A4">ajouter</a></li>
+					<li><a href="#!updateVisit" style="color: #A4A4A4">modifier</a></li>
+					<li><a href="#!deleteVisit" style="color: #A4A4A4">supprimer</a></li>
+				</ul></li>
 		</ul>
 	</nav>
-	
+
 	<br>
+
+	<div style="position: absolute; margin-top: 50px" id="div"
+		ng-view></div>
 	
-	<div style="position: absolute;height: 100%; margin-top: 50px" id="div" ng-view ></div>
+	<div ng-include="'partials/Template/footer.html'" style="postion: absolute; margin-top: 100%"></div>
+	<script>
+		monApp.controller("monC", function($scope) {
+
+		});
+	</script>
 
 </body>
 
