@@ -22,6 +22,30 @@ monApp
 	
 })
 
+.controller('findAllPropertyController2', function($scope, biensProvider, $rootScope, $location, $window) {
+	biensProvider.getListProperty(function(calback){
+		$rootScope.indiceCo=false;
+		$rootScope.conseillerID=0;
+		$scope.listeBiens=calback;
+	});
+	biensProvider.getListcs(function(calback){
+		$scope.listecs=calback;
+	});
+	
+	$scope.getProperty=function(property){
+		$rootScope.oneProperty=null;
+		$rootScope.oneProperty=property;
+		$location.path('/findProperty2');
+	};
+	
+	$scope.getPropertyByCategory=function(id){
+		$rootScope.idCategory=null;
+		$rootScope.idCategory=id;
+		$location.path('/findAllPropertyByCategory');
+	};
+	
+})
+
 .controller('findAllPropertyByCategoryController', function($scope, $rootScope, biensProvider, $location){
 	$scope.id=undefined;
 	if ($rootScope.idCategory==null){
