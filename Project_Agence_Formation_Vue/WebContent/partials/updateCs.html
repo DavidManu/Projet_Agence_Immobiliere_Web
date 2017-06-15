@@ -1,0 +1,31 @@
+<h2>MODIFIERUNE CATEGORIE</h2>
+<br>
+<form>
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="ID"><p>ID</p></label>
+    <input type="number" class="form-control" id="ID" ng-model="updateCsForm.id" >
+  </div>
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="type"><p>Categorie</p></label>
+    <input type="text" class="form-control" id="type" placeholder="Nom de la categorie" ng-model="updateCsForm.type" >
+  </div>
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="date"><p>Date de construction min</p></label>
+    <input type="number" class="form-control" id="date" ng-model="updateCsForm.dateConstructionMin" >
+  </div>
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="surface"><p>Surface min</p></label>
+    <input type="number" class="form-control" id="surface" ng-model="updateCsForm.minSurfaceMin" >
+  </div>
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="prix"><p>Prix min</p></label>
+    <input type="number" class="form-control" id="prix" ng-model="updateCsForm.prixMin" >
+  </div>
+  <br>
+  <button type="submit" class="btn btn-info" style="margin-left: 10%" ng-click="updateCs()" >modifier</button>
+  <br>
+  <br>
+  <button type="reset" class="btn btn-warning" style="margin-left: 10%" >effacer</button>
+  <p></p>
+  <br>
+</form>

@@ -2,12 +2,26 @@ monApp.factory('biensProvider', function($http){
 	
 	var restUrl='http://localhost:8181/Projer_Agence_Formation/rest/bienWS/';
 	
+	var restUrlcs='http://localhost:8181/Projer_Agence_Formation/rest/ClasseStandardWS/';
+	
 //	var geoURL='https://maps.googleapis.com/maps/api/geocode/json?address=';
 	
 	function findAllProperty(calback){
 		$http({
 			method: 'GET',
 			url: restUrl+'Biens'
+		}).then(function successCalback(response){
+			console.log(response.data);
+			calback(response.data);
+		}, function echecCalback(response){
+			console.log("erreur : " + response.status + " " + response.statusText);
+		});
+	}
+	
+	function findAllcs(calback){
+		$http({
+			method: 'GET',
+			url: restUrlcs+'liste'
 		}).then(function successCalback(response){
 			console.log(response.data);
 			calback(response.data);
@@ -76,6 +90,7 @@ monApp.factory('biensProvider', function($http){
 	
 	return {
 		getListProperty:findAllProperty,
+		getListcs:findAllcs,
 		getProperty:findProperty,
 		createProperty:addProperty,
 		changeProperty:updateProperty,

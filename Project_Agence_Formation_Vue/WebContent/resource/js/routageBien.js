@@ -8,6 +8,10 @@ monApp.config(function ($routeProvider) {
 		controller: 'findPropertyByID',
 		templateUrl: 'partials/findProperty.html'
 	})
+	.when('/findProperty2', {
+		controller: 'findProperty',
+		templateUrl: 'partials/findProperty2.html'
+	})
 	.when('/createProperty', {
 		controller: 'addPropertyController',
 		templateUrl: 'partials/createProperty.html'

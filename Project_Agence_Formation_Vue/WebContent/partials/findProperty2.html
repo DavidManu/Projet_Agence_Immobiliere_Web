@@ -1,0 +1,27 @@
+<h2 >UNE PROPRIETE</h2>
+<br>
+<div style="display: inline-block;margin-top: 0%;width: 60%; margin-left: 35%">
+	<ul class="media-list">
+  		<li class="media" >
+    		<div class="media-left">
+        			<img src={{b.image}} width="256px">
+    		</div>
+    		<div class="media-body">
+    			<ul>
+    				<li ng-show="indice1"><p style="text-align: left"><b>{{b.type}} a acheter</b></p></li>
+    				<li ng-show="indice2"><p style="text-align: left"><b>{{b.type}} a louer ({{b.garniture}})</b></p></li>
+    				<li><p style="text-align: left"><b>batiment {{b.etat}}</b></p></li>
+    				<li><p style="text-align: left"><b>superficie de {{b.superficie|number:1}} m*m</b></p></li>
+    				<li ng-show='indice1'><p style="text-align: left"><b>prix : {{b.prix|number:0}} euros</b></p></li>
+    				<li ng-show='indice2'><p style="text-align: left"><b>loyer : {{b.loyer|number:0}} + {{b.charges|number:0}} de charges</b></p></li>
+    				<li ng-show='indice2'><p style="text-align: left"><b>caution : {{b.caution|number:0}} euros</b></p></li>
+    				<li><p style="text-align: left"><b>disponible a partir du {{b.dateDispo|date: "dd"}} {{b.dateDispo|date: "MMMM"}} {{b.dateDispo|date: "yyyy"}}</b></p></li>
+    				<li><p style="text-align: left"><b>adresse : {{b.adresse.rue}}, {{b.adresse.codePostal}} {{b.adresse.ville}}</b></p></li>
+    			</ul>
+    			<br>
+				<button type="submit" class="btn btn-default" style="margin-left: 10%" ng-click="XXX" >visite</button>
+    		</div>
+    		<br>
+  		</li>
+	</ul>
+</div>

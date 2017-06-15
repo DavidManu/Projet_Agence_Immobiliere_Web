@@ -2,17 +2,39 @@
 <br/>
 <div style="display: inline-block;position: absolute;margin-top: 0%;width: 25%; margin-left: 5%">
 	<ul class="nav nav-pills nav-stacked">
-		<li>coucou<li>
-		<li>coucou<li>
-		<li>coucou<li>
-		<li>coucou<li>
+		<li ng-repeat="cs in listecs" >
+			<div class="panel panel-primary" style="background-color: #81BEF7; width: 80%" >
+				<div class="panel-body">
+    				<p style="text-align: left" ><b>{{cs.type}}</b></p>
+  				</div>
+  				<div style="background-color: #BDBDBD" class="panel-footer">
+  					<p style="text-align: left">date de construction min : {{cs.dateConstructionMin}}</p>
+  					<p style="text-align: left">surface min : {{cs.minSurfaceMin|number:0}}</p>
+  					<p style="text-align: left">prix min : {{cs.prixMin|number:0}}</p>
+  				</div>
+			</div>
+		<li>
 	</ul>
+	<br>
+	<div style="margin-top: 15%" class="dropup">
+  		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Operations
+		    <span class="caret"></span>
+  		</button>
+	    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+	      <li><a href="#!createCs">ajouter</a></li>
+	      <li><a href="#!updateCs">modifier</a></li>
+	      <li><a href="#!deletecs">supprimer</a></li>
+	    </ul>
+	</div>
 </div>
-<div style="display: inline-block;margin-top: 0%;width: 60%; margin-left: 35%">
+<div style="display: inline-block;margin-top: 0%;width: 60%; margin-left: 40%">
 	<ul class="media-list">
   		<li class="media" ng-repeat="b in listeBiens" >
     		<div class="media-left">
+    			<button type="submit" ng-click="getProperty(b)" style="background-color: transparent; border: none" >
         			<img src={{b.image}} width="256px">
+        		</a>
     		</div>
     		<div class="media-body">
     			<ul>
