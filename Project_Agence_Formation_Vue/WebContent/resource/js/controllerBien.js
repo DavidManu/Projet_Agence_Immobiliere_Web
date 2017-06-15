@@ -4,6 +4,9 @@ monApp
 	biensProvider.getListProperty(function(calback){
 		$scope.listeBiens=calback;
 	});
+	biensProvider.getListcs(function(calback){
+		$scope.listecs=calback;
+	});
 })
 
 .controller('findPropertyByID', function($scope, biensProvider, $rootScope, $location){
@@ -86,6 +89,7 @@ monApp
 	$scope.indice2=false;
 	$scope.indice3=false;
 	$scope.updatePropertyForm={
+		id: "",
 		type: "",
 		superficie: 0,
 		genre: undefined,
