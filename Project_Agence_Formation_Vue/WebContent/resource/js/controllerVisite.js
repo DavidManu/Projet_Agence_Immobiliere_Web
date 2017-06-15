@@ -47,6 +47,7 @@ monApp
 .controller('updateVisiteController', function($scope,visiteProvider,$location,$rootScope){
 	if($rootScope.visiteMod==null){
 	$scope.updVisiteForm={
+			id:undefined,
 			dateVisite:undefined,
 			clientAccepte:undefined,
 			conseillerAccepte:undefined,
@@ -56,6 +57,7 @@ monApp
 	}
 	}else{
 		$scope.updVisiteForm={
+				id:$rootScope.visiteMod.id,
 				dateVisite:$rootScope.visiteMod.dateVisite,
 				clientAccepte:$rootScope.visiteMod.clientAccepte,
 				conseillerAccepte:$rootScope.visiteMod.conseillerAccepte,

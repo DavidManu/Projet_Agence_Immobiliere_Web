@@ -7,7 +7,7 @@ monApp
 	
 	$scope.deleteLien=function(id){
 		console.log($scope.id)
-		visiteProvider.delContrat(id,function(callBack){
+		contratProvider.delContrat(id,function(callBack){
 			
 			if(callBack!=undefined && callBack!=''){
 				contratProvider.getListContrat(function(callBack){
@@ -52,6 +52,7 @@ monApp
 .controller('updateContratController', function($scope,contratProvider,$location,$rootScope){
 	if($rootScope.contratMod==null){
 	$scope.updContratForm={
+			id:undefined,
 			dateSignature:undefined,
 			refContrat:undefined,
 			Bien:{
@@ -66,6 +67,7 @@ monApp
 	}
 	}else{
 		$scope.updContratForm={
+				id:$rootScope.contratMod.id,
 				dateSignature:$rootScope.contratMod.dateSignature,
 				refContrat:$rootScope.contratMod.refContrat,
 				Bien:{
@@ -114,5 +116,23 @@ $scope.delContrat=function(){
 				$scope.indice=false;
 			}
 		})
+	}
+	
+	$scope.deleteLien=function(id){
+		console.log($scope.id)
+		visiteProvider.delContrat(id,function(callBack){
+			
+			if(callBack!=undefined && callBack!=''){
+				contratProvider.getListContrat(function(callBack){
+					$scope.listeContrat=callBack;
+				});
+			}
+		});
+	}
+	
+	$scope.modifLien=function(contrat){
+		$rootScope.contratMod=contrat;
+		console.log($rootScope.contratMod);
+		$location.path('/updateContract');
 	}
 })
