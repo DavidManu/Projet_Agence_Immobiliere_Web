@@ -4,6 +4,14 @@ monApp.config(function ($routeProvider) {
 		controller: 'findAllPropertyController',
 		templateUrl: 'partials/findAllProperty.html'
 	})
+	.when('/findAllPropertyByCategory', {
+		controller: 'findAllPropertyByCategoryController',
+		templateUrl: 'partials/findAllPropertyByCategory.html'
+	})
+	.when('/findAllPropertyByCategory2', {
+		controller: 'findAllPropertyByCategoryController2',
+		templateUrl: 'partials/findAllPropertyByCategory2.html'
+	})
 	.when('/findProperty', {
 		controller: 'findPropertyByID',
 		templateUrl: 'partials/findProperty.html'

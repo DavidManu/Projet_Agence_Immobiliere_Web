@@ -14,6 +14,68 @@ monApp
 		$location.path('/findProperty2');
 	};
 	
+	$scope.getPropertyByCategory=function(id){
+		$rootScope.idCategory=null;
+		$rootScope.idCategory=id;
+		$location.path('/findAllPropertyByCategory');
+	};
+	
+})
+
+.controller('findAllPropertyByCategoryController', function($scope, $rootScope, biensProvider, $location){
+	$scope.id=undefined;
+	if ($rootScope.idCategory==null){
+		$scope.id=null;
+	}
+	else {
+		$scope.id=$rootScope.idCategory;
+	}
+	biensProvider.getAllPropertyByCategory($scope.id, function(calback){
+			$scope.listeBiens=calback;
+	});
+	biensProvider.getListcs(function(calback){
+		$scope.listecs=calback;
+	});
+	
+	$scope.getProperty=function(property){
+		$rootScope.oneProperty=null;
+		$rootScope.oneProperty=property;
+		$location.path('/findProperty2');
+	};
+	
+	$scope.getPropertyByCategory=function(id){
+		$rootScope.idCategory=null;
+		$rootScope.idCategory=id;
+		$location.path('/findAllPropertyByCategory2');
+	};
+})
+
+.controller('findAllPropertyByCategoryController2', function($scope, $rootScope, biensProvider, $location){
+	$scope.id=undefined;
+	if ($rootScope.idCategory==null){
+		$scope.id=null;
+	}
+	else {
+		$scope.id=$rootScope.idCategory;
+	}
+	biensProvider.getAllPropertyByCategory($scope.id, function(calback){
+			$scope.listeBiens=calback;
+	});
+	biensProvider.getListcs(function(calback){
+		$scope.listecs=calback;
+	});
+	
+	$scope.getProperty=function(property){
+		$rootScope.oneProperty=null;
+		$rootScope.oneProperty=property;
+		$location.path('/findProperty2');
+	};
+	
+	$scope.getPropertyByCategory=function(id){
+		$rootScope.idCategory=null;
+		$rootScope.idCategory=id;
+		$location.path('/findAllPropertyByCategory');
+	};
 })
 
 .controller('findProperty', function($scope, biensProvider, $rootScope, $location){

@@ -18,6 +18,18 @@ monApp.factory('biensProvider', function($http){
 		});
 	}
 	
+	function findAllPropertyByCategory(id, calback){
+		$http({
+			method: 'GET',
+			url: restUrl+'BiensIDca?pId='+id
+		}).then(function successCalback(response){
+			console.log(response.data);
+			calback(response.data);
+		}, function echecCalback(response){
+			console.log("erreur : " + response.status + " " + response.statusText);
+		});
+	}
+	
 	function findAllcs(calback){
 		$http({
 			method: 'GET',
@@ -90,6 +102,7 @@ monApp.factory('biensProvider', function($http){
 	
 	return {
 		getListProperty:findAllProperty,
+		getAllPropertyByCategory:findAllPropertyByCategory,
 		getListcs:findAllcs,
 		getProperty:findProperty,
 		createProperty:addProperty,
