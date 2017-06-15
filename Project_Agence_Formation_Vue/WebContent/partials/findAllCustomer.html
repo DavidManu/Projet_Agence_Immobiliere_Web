@@ -1,4 +1,4 @@
-<h1 align="center" style="color: white;">Liste des client</h1> 
+<h1 align="center" style="color: white;">Liste des client</h1>
 <div class="container">
 	<div class="row col-md-6 col-md-offset-2 custyle"
 		style="margin: auto; width: 100%">
@@ -12,6 +12,7 @@
 				<th style="text-align: center">Rue</th>
 				<th style="text-align: center">CodePostal</th>
 				<th style="text-align: center">Ville</th>
+				<th style="text-align: center">Operations</th>
 			</tr>
 			<tr ng-repeat="customer in listeCustomer" style="text-align: center">
 				<td style="text-align: center">{{customer.id}}</td>
@@ -21,6 +22,10 @@
 				<td style="text-align: center">{{customer.adresse.rue}}</td>
 				<td style="text-align: center">{{customer.adresse.codePostal}}</td>
 				<td style="text-align: center">{{customer.adresse.ville}}</td>
+				<td style="text-align: center"><a
+					style="cursor: pointer" ng-click="updateCLink(customer)">Modifier</a>
+					| <a style="cursor: pointer" ng-click="deleteCLink(customer.id)">Supprimer</a>
+				</td>
 			</tr>
 		</table>
 	</div>

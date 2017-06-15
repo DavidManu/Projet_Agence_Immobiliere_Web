@@ -42,7 +42,7 @@ monApp
 					function deleteCustomer(id, callBack) {
 						$http({
 							method : 'DELETE',
-							url : restPropUrl + "/supprimer/" + id
+							url : restPropUrl + "/supprimer/" + id 
 
 						}).then(function successCallBack(response) {
 

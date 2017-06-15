@@ -24,7 +24,8 @@ monApp.controller("findAllOwnerCtrl", function($scope, ownerProvider,
 	}
 });
 
-monApp.controller("findOwnerCtrl", function($scope, ownerProvider, $location, $rootScope) {
+monApp.controller("findOwnerCtrl", function($scope, ownerProvider, $location,
+		$rootScope) {
 
 	$scope.id = undefined;
 	$scope.indice = false;
@@ -65,7 +66,7 @@ monApp.controller("deleteOwnerCtrl",
 
 			$scope.id = undefined;
 			$scope.indice = false;
-
+			$scope.msg = "";
 			$scope.supprimer = function() {
 
 				ownerProvider.deleteO($scope.id, function(callBack) {
