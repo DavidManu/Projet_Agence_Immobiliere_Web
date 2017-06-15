@@ -18,7 +18,7 @@ monApp.config(function ($routeProvider) {
 		controller : 'updateCustomerCtrl',
 		templateUrl : 'partials/updateCustomer.html'
 	}).otherwise({
-		redirectTo : '/listOfCustomers'
+		redirectTo : '/listOfProperty'
 	})
 	
 });

@@ -18,7 +18,7 @@ monApp.config(function($routeProvider) {
 		controller : 'updateOwnerCtrl',
 		templateUrl : 'partials/updateOwner.html'
 	}).otherwise({
-		redirectTo : '/listOfOwners'
+		redirectTo : '/listOfProperty'
 	})
 
 });
