@@ -35,9 +35,10 @@ table {
     margin-left: 0%;
 }
 body {
-    background-image: url("../images/wallhaven-494998.jpg");
-    background-attachment: fixed;
-	background-size: 100%;
+/*     background-image: url("../images/wallhaven-494998.jpg"); */
+/*     background-attachment: fixed; */
+/* 	background-size: 100%; */
+	background-color: #E8E8E8;
 }
 
 .map {

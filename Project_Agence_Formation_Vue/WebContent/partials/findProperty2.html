@@ -39,7 +39,9 @@
 							<b>adresse : {{b.adresse.rue}}, {{b.adresse.codePostal}}
 								{{b.adresse.ville}}</b>
 						</p></li>
-    				<li><p style="text-align: left"><b>cadastre : {{b.cadastre}}</b></p></li>
+    				<li><p style="text-align: left"><b>Cadastre : <a target="_blank"
+    				href="https://www.geoportail.gouv.fr/carte?c={{lng}},{{lat}}&z=20&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&l1=CADASTRALPARCELS.PARCELS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes">
+    				{{b.cadastre}}</a></b></p></li>
 					<li>
 						<p style="text-align: center">
 							<b>Effectuez une visite virtuelle </b>
