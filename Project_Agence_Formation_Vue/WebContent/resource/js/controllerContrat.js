@@ -120,11 +120,11 @@ $scope.delContrat=function(){
 	
 	$scope.deleteLien=function(id){
 		console.log($scope.id)
-		visiteProvider.delContrat(id,function(callBack){
+		contratProvider.delContrat(id,function(callBack){
 			
 			if(callBack!=undefined && callBack!=''){
 				contratProvider.getListContrat(function(callBack){
-					$scope.listeContrat=callBack;
+					$location.path('/listOfContracts');
 				});
 			}
 		});

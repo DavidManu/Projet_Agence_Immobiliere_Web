@@ -108,7 +108,7 @@ $scope.suppVisite=function(){
 			
 			if(callBack!=undefined && callBack!=''){
 				visiteProvider.getListVisite(function(callBack){
-					$scope.listeVisite=callBack;
+					$location.path('/listOfVisits');
 				});
 			}
 		});
