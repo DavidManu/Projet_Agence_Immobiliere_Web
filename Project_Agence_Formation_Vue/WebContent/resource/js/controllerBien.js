@@ -104,11 +104,18 @@ monApp
 
 .controller('findProperty', function($scope, biensProvider, $rootScope, $location){
 	$scope.b=null;
+	$scope.montrerMap=false;
 	if ($rootScope.oneProperty==null){
 		$scope.b=null;
+		$scope.rue= "";
+		$scope.codePostal= 0;
+		$scope.ville= "";
 	}
 	else {
 		$scope.b=$rootScope.oneProperty;
+		$scope.rue=$scope.b.adresse.rue;
+		$scope.codePostal=$scope.b.adresse.codePostal;
+		$scope.ville=$scope.b.adresse.vile;
 	}
 	$scope.cache=false;
 	$scope.indice1=false;
@@ -122,10 +129,30 @@ monApp
 		$scope.indice1=false;
 		$scope.indice2=true;
 	}
+	$scope.afficherMap=function(){
+		personnesProvider.geoAdresse($scope.rue, $scope.codePostal, $scope.ville, function(calback){
+			if ((calback!=0)&&(calback!="")) {
+				$scope.montrerMap=true;
+				$scope.map=calback;
+				$scope.lat=$scope.map.results[0].geometry.location.lat;
+				$scope.lng=$scope.map.results[0].geometry.location.lng;
+				map=new google.maps.Map(document.getElementById("map"), {
+			        zoom: 19,
+			        center: new google.maps.LatLng($scope.lat, $scope.lng),
+			        mapTypeId: google.maps.MapTypeId.ROADMAP
+			    });
+				marker=new google.maps.Marker({
+			          position: {lat: $scope.lat, lng: $scope.lng},
+			          map: map
+			    });
+			}
+		});
+	};
 })
 
 .controller('findPropertyByID', function($scope, biensProvider, $rootScope, $location){
 	$scope.cache=false;
+	$scope.montrerMap=false;
 	$scope.indice1=false;
 	$scope.indice2=false;
 	$scope.id= 0;
@@ -144,6 +171,29 @@ monApp
 				}
 				console.log($scope.indice1);
 				console.log($scope.indice2);
+			}
+		});
+	};
+	$scope.b=$rootScope.oneProperty;
+	$scope.rue=$scope.b.adresse.rue;
+	$scope.codePostal=$scope.b.adresse.codePostal;
+	$scope.ville=$scope.b.adresse.vile;
+	$scope.afficherMap=function(){
+		personnesProvider.geoAdresse($scope.rue, $scope.codePostal, $scope.ville, function(calback){
+			if ((calback!=0)&&(calback!="")) {
+				$scope.montrerMap=true;
+				$scope.map=calback;
+				$scope.lat=$scope.map.results[0].geometry.location.lat;
+				$scope.lng=$scope.map.results[0].geometry.location.lng;
+				map=new google.maps.Map(document.getElementById("map"), {
+			        zoom: 19,
+			        center: new google.maps.LatLng($scope.lat, $scope.lng),
+			        mapTypeId: google.maps.MapTypeId.ROADMAP
+			    });
+				marker=new google.maps.Marker({
+			          position: {lat: $scope.lat, lng: $scope.lng},
+			          map: map
+			    });
 			}
 		});
 	};

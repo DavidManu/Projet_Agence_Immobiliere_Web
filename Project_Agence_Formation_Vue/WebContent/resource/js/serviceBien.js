@@ -4,7 +4,7 @@ monApp.factory('biensProvider', function($http){
 	
 	var restUrlcs='http://localhost:8181/Projer_Agence_Formation/rest/ClasseStandardWS/';
 	
-//	var geoURL='https://maps.googleapis.com/maps/api/geocode/json?address=';
+	var geoURL='https://maps.googleapis.com/maps/api/geocode/json?address=';
 	
 	function findAllProperty(calback){
 		$http({
@@ -86,8 +86,6 @@ monApp.factory('biensProvider', function($http){
 		});
 	}
 	
-
-	
 	function deleteProperty(id, calback){
 		$http({
 			method: 'DELETE',
@@ -100,6 +98,18 @@ monApp.factory('biensProvider', function($http){
 		});
 	}
 	
+	function localiserAdresse(rue, codePostal, ville, calback){
+		$http({
+			method: 'GET',
+			url: geoURL+rue+', '+codePostal+' '+ville+'&key=AIzaSyDy1ZKI7FhtHYJx8VEB0GQyjcUoxc2nwy4'
+		}).then(function successCalback(response){
+			console.log(response.data);
+			calback(response.data);
+		}, function echecCalback(response){
+			console.log("erreur : " + response.status + " " + response.statusText);
+		});
+	}
+	
 	return {
 		getListProperty:findAllProperty,
 		getAllPropertyByCategory:findAllPropertyByCategory,
@@ -107,7 +117,8 @@ monApp.factory('biensProvider', function($http){
 		getProperty:findProperty,
 		createProperty:addProperty,
 		changeProperty:updateProperty,
-		removeProperty:deleteProperty
+		removeProperty:deleteProperty,
+		geoAdresse:localiserAdresse
 		};
 	
 })
