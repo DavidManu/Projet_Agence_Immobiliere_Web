@@ -31,6 +31,14 @@
     				<li ng-show='indice2'><p style="text-align: left"><b>caution : {{b.caution|number:0}} euros</b></p></li>
     				<li><p style="text-align: left"><b>disponible a partir du {{b.dateDispo|date: "dd"}} {{b.dateDispo|date: "MMMM"}} {{b.dateDispo|date: "yyyy"}}</b></p></li>
     				<li><p style="text-align: left"><b>adresse : {{b.adresse.rue}}, {{b.adresse.codePostal}} {{b.adresse.ville}}</b></p></li>
+    				<li>
+    					<p style="text-align: left"><b>Visite virtuelle :</b></p>
+	    					<video id="example_video_1" class="video-js vjs-default-skin" controls 
+	  							poster="resource/images/maison1.jpg" 
+	  							preload="auto" width="600" height="200" 
+	  							style="width: 80%" vjs-video >
+	    					<source src="resource/images/visite1.mp4" type='video/mp4' />
+    				</li>
     			</ul>
     		</div>
     		<br>
