@@ -65,7 +65,20 @@ monApp
 			}
 	}
 	}else{
-		
+		$scope.updContratForm={
+				dateSignature:$rootScope.contratMod.dateSignature,
+				refContrat:$rootScope.contratMod.refContrat,
+				Bien:{
+					id:$rootScope.contratMod.bien.id
+				},
+				Client:{
+					id:$rootScope.contratMod.client.id
+				},				
+				Conseiller:{
+					id:$rootScope.contratMod.conseiller.id
+				}
+		}
+		$rootScope.contratMod=null;
 	}
 	
 	$scope.updContrat=function(){
