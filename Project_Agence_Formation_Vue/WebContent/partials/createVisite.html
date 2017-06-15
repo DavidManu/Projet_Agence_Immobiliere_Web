@@ -1,6 +1,15 @@
 <form class="form-horizontal" style="width: 40%; margin:auto">
 	<div style="padding-top: 20px; width: 100%">
 
+
+		<div class="form-group">
+			<label for="dateVisite"><p>Date de visite</p></label>
+			<div>
+				<input type="text" id="dateVisite"
+					ng-model="addVisiteForm.dateVisite">
+			</div>
+		</div>
+
 		<div class="form-group">
 			<label for="clientA"><p>ClientAccepte</p></label>
 			<div>
@@ -17,13 +26,20 @@
 			</div>
 		</div>
 
-		<div class="form-group">
-			<label for="dateVisite"><p>Date de visite</p></label>
+	<div class="form-group">
+			<label for="idCon"><p>ID du client</p></label>
 			<div>
-				<input type="text" id="dateVisite"
-					ng-model="addVisiteForm.dateVisite">
+				<input type="text" id="idCon" ng-model="addVisiteForm.client.id">
 			</div>
 		</div>
+		
+		<div class="form-group">
+			<label for="idCon"><p>ID du bien</p></label>
+			<div>
+				<input type="text" id="idCon" ng-model="addVisiteForm.bien.id">
+			</div>
+		</div>
+	
 
 		<div class="form-group">
 			<label for="idCon"><p>ID duc onseiller</p></label>

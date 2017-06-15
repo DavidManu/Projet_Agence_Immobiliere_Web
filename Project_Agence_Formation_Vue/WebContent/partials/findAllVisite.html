@@ -8,6 +8,9 @@
 				<th style="text-align: center">Date de visite</th>
 				<th style="text-align: center">Client accepte</th>
 				<th style="text-align: center">Conseiller accepte</th>
+				<th style="text-align: center">ID du bien</th>
+				<th style="text-align: center">ID du client</th>
+				<th style="text-align: center">ID du conseiller</th>
 				<th style="text-align: center">Operation</th>
 			</tr>
 			<tr ng-repeat="v in listeVisite" style="text-align: center">
@@ -15,6 +18,9 @@
 				<td>{{v.dateVisite}}</td>
 				<td>{{v.clientAccepte}}</td>
 				<td>{{v.conseillerAccepte}}</td>
+				<td>{{v.bien.id}}</td>
+				<td>{{v.client.id}}</td>
+				<td>{{v.conseiller}}</td>
 				<td><a class='btn btn-info btn-xs' ng-click="modifLien(v)">Modifier</a> | <a class="btn btn-danger btn-xs" ng-click="deleteLien(v.id)">Supprimer</a></td>
 
 			</tr>

@@ -31,6 +31,12 @@ monApp
 			dateVisite:undefined,
 			clientAccepte:undefined,
 			conseillerAccepte:undefined,
+			Bien:{
+				id:undefined
+			},
+			Client:{
+				id:undefined
+			},
 			Conseiller:{
 				id:undefined
 			}
