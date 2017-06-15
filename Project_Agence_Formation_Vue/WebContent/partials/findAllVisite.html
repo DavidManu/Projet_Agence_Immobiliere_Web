@@ -2,19 +2,20 @@
 	<div class="row col-md-6 col-md-offset-2 custyle"
 		style="margin: auto; width: 100%">
 		<table class="table table-bordered"
-			style="background-color: white; margin-top: 40px">
+			style="background-color: white; margin-top: 40px; width: 80%">
 			<tr>
 				<th style="text-align: center">ID</th>
 				<th style="text-align: center">Date de visite</th>
-				<th style="text-align: center">Client accepte what</th>
-				<th style="text-align: center">Conseiller accepte what</th>
+				<th style="text-align: center">Client accepte</th>
+				<th style="text-align: center">Conseiller accepte</th>
+				<th style="text-align: center">Operation</th>
 			</tr>
 			<tr ng-repeat="v in listeVisite" style="text-align: center">
 				<td>{{v.id}}</td>
 				<td>{{v.dateVisite}}</td>
 				<td>{{v.clientAccepte}}</td>
 				<td>{{v.conseillerAccepte}}</td>
-
+				<td><a class='btn btn-info btn-xs' ng-click="modifLien(v)">Modifier</a> | <a class="btn btn-danger btn-xs" ng-click="deleteLien(v.id)">Supprimer</a></td>
 
 			</tr>
 		</table>

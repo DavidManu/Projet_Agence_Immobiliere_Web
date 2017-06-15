@@ -26,8 +26,9 @@
 				<tr>
 					<th style="text-align: center">ID</th>
 					<th style="text-align: center">Date de visite</th>
-					<th style="text-align: center">Client accepte what</th>
-					<th style="text-align: center">Conseiller accepte what</th>
+					<th style="text-align: center">Client accepte</th>
+					<th style="text-align: center">Conseiller accepte</th>
+					<th style="text-align: center">Operation</th>
 				</tr>
 
 				<tr>
@@ -35,7 +36,8 @@
 					<td style="text-align: center">{{visiteRec.dateVisite}}</td>
 					<td style="text-align: center">{{visiteRec.clientAccepte}}</td>
 					<td style="text-align: center">{{visiteRec.conseillerAccepte}}</td>
-
+					<td style="text-align: center"><a ng-click="modifLien(visiteRec)">Modifier</a> | <a
+				ng-click="deleteLien(visiteRec.id)">Supprimer</a></td>
 
 				</tr>
 			</table>
