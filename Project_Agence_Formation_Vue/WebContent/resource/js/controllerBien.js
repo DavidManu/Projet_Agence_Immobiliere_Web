@@ -7,6 +7,35 @@ monApp
 	biensProvider.getListcs(function(calback){
 		$scope.listecs=calback;
 	});
+	
+	$scope.getProperty=function(property){
+		$rootScope.oneProperty=null;
+		$rootScope.oneProperty=property;
+		$location.path('/findProperty2');
+	};
+	
+})
+
+.controller('findProperty', function($scope, biensProvider, $rootScope, $location){
+	$scope.b=null;
+	if ($rootScope.oneProperty==null){
+		$scope.b=null;
+	}
+	else {
+		$scope.b=$rootScope.oneProperty;
+	}
+	$scope.cache=false;
+	$scope.indice1=false;
+	$scope.indice2=false;
+	$scope.id= 0;
+	if ($scope.b.genre==1){
+		$scope.indice1=true;
+		$scope.indice2=false;
+	}
+	else {
+		$scope.indice1=false;
+		$scope.indice2=true;
+	}
 })
 
 .controller('findPropertyByID', function($scope, biensProvider, $rootScope, $location){
