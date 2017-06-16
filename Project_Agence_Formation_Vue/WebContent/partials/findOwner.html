@@ -1,4 +1,4 @@
-<h1 align="center" style="color: white;">Formulaire de recherche</h1>
+<h1 align="center" style="color: #333";">Formulaire de recherche</h1>
 <div class="container">
 	<div class="row col-md-6 col-md-offset-2 custyle"
 		style="margin: auto; width: 100%">
@@ -40,9 +40,9 @@
 				<td style="text-align: center">{{owner_rec.adresse.rue}}</td>
 				<td style="text-align: center">{{owner_rec.adresse.codePostal}}</td>
 				<td style="text-align: center">{{owner_rec.adresse.ville}}</td>
-				<td style="text-align: center"><a
-					style="cursor: pointer" ng-click="updateOLink(owner_rec)">Modifier</a>
-					| <a style="cursor: pointer" ng-click="deleteOLink(owner_rec.id)">Supprimer</a>
+				<td style="text-align: center"><a class='btn btn-info btn-xs'
+					ng-click="updateOLink(owner_rec)">Modifier</a> | <a
+					class="btn btn-danger btn-xs" ng-click="deleteOLink(owner_rec.id)">Supprimer</a>
 				</td>
 			</tr>
 
