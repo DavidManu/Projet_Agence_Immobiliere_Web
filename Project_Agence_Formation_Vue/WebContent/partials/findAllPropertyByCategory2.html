@@ -12,7 +12,7 @@
 	  			</button>
   				<div style="background-color: with" class="panel-footer">
   					<p style="text-align: left">date de construction min : {{cs.dateConstructionMin}}</p>
-  					<p style="text-align: left">surface min : {{cs.minSurfaceMin|number:0}}</p>
+  					<p style="text-align: left">surface min : {{cs.minSurfaceMin|number:0}} m*m</p>
   					<p style="text-align: left">prix min : {{cs.prixMin|number:0}}</p>
   				</div>
 			</div>
@@ -65,7 +65,6 @@
     				<li ng-show='!{{b.genre}}'><p style="text-align: left"><b>caution : {{b.caution|number:0}} euros</b></p></li>
     				<li><p style="text-align: left"><b>disponible a partir du {{b.dateDispo|date: "dd"}} {{b.dateDispo|date: "MMMM"}} {{b.dateDispo|date: "yyyy"}}</b></p></li>
     				<li><p style="text-align: left"><b>adresse : {{b.adresse.rue}}, {{b.adresse.codePostal}} {{b.adresse.ville}}</b></p></li>
-    				<li><p style="text-align: left"><b>cadastre : {{b.cadastre}}</b></p></li>
     			</ul>
     		</div>
     		<br>
