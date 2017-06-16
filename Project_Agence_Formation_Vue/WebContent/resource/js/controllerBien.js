@@ -200,6 +200,9 @@ monApp
 	$scope.indice2=false;
 	$scope.indice3=false;
 	$scope.indice4=false;
+	biensProvider.getListcs(function(calback){
+		$scope.listecs=calback;
+	});
 	$scope.addPropertyForm={
 		type: "",
 		superficie: 0,
@@ -233,9 +236,6 @@ monApp
 			$scope.indice2=true;
 		}
 		$scope.indice3=true;
-		biensProvider.getListcs(function(calback){
-			$scope.listecs=calback;
-		});
 	};
 	$scope.addProperty=function(){
 		biensProvider.createProperty($scope.addPropertyForm, function(calback){

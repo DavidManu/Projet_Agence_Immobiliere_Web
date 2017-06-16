@@ -7,12 +7,7 @@
     <label class="control-label" for="tye"><p>Type</p></label>
 	  <div class="controls">
 		<select id="type" ng-model="addPropertyForm.type">
-		  <option value="appartement">appartement</option>
-		  <option value="bureau">bureau</option>
-		  <option value="entrepot">entrepot</option>
-		  <option value="local">local</option>
-		  <option value="maison">maison</option>
-		  <option value="terrain">terrain</option>
+		  <option ng-repeat="cs in listecs" value="{{cs.type}}">{{cs.type}}</option>
 		</select>
 	  </div>
 	</div>
