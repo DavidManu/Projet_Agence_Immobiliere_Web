@@ -1,4 +1,4 @@
-<div style="height: 1200px" >
+<div style="height: 1400px" >
 <div style="display: inline-block; width: 60%; margin-top: 0px; margin-left: 0%" >
 	<div style="width: 95%; margin-top: 1%; margin-left: 2%; border: 2px solid black; background-color: white" >
 		<h2 style="color: black; text-align: left; margin-left: 5%" >{{b.type}}</h2>
@@ -54,4 +54,33 @@
 		<div ng-show="montrerMap" id="map" style="height: 500px; border: 2px solid black; margin-top: -2px" ></div>
 	</div>
 </div>
+<br>
+<br>
+<h2>PROPRIETAIRE</h2>
+<br>
+<table class="table table-bordered""
+			style="background-color: white; margin-top: 40px; margin-left: -1%">
+			<tr>
+				<th style="text-align: center">ID</th>
+				<th style="text-align: center">Nom</th>
+				<th style="text-align: center">Prenom</th>
+				<th style="text-align: center">NumPrive</th>
+				<th style="text-align: center">NumTravail</th>
+				<th style="text-align: center">Rue</th>
+				<th style="text-align: center">CodePostal</th>
+				<th style="text-align: center">Ville</th>
+			</tr>
+			<tr>
+				<td style="text-align: center">{{b.proprietaire.id}}</td>
+				<td style="text-align: center">{{b.proprietaire.nom}}</td>
+				<td style="text-align: center">{{b.proprietaire.prenom}}</td>
+				<td style="text-align: center">{{b.proprietaire.numPrive}}</td>
+				<td style="text-align: center">{{b.proprietaire.numTravail}}</td>
+				<td style="text-align: center">{{b.adresse.rue}}</td>
+				<td style="text-align: center">{{b.adresse.codePostal}}</td>
+				<td style="text-align: center">{{b.adresse.ville}}</td>
+			</tr>
+
+		</table>
+	<br>
 </div>

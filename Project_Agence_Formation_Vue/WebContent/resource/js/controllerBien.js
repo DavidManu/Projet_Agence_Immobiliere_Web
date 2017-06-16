@@ -102,7 +102,7 @@ monApp
 	};
 })
 
-.controller('findProperty', function($scope, biensProvider, $rootScope, $location){
+.controller('findProperty', function($scope, biensProvider, ownerProvider, $rootScope, $location){
 	$scope.b=null;
 	$scope.montrerMap=false;
 	if ($rootScope.oneProperty==null){

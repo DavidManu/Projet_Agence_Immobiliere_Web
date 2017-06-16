@@ -1,4 +1,4 @@
-<div style="height: 1200px" >
+<div style="height: 1400px" >
 <h2 ng-show="!cache">RECHERCHER UNE PROPRIETE</h2>
 <br ng-show="!cache">
 <form ng-show="!cache">
@@ -9,10 +9,10 @@
 			ng-model="id">
 	</div>
 	<br>
-	<button type="submit" class="btn btn-success" style="margin-left: 10%"
+	<button type="submit" class="btn btn-success" style="margin-left: 5%"
 		ng-click="findProperty()">afficher</button>
 	<br> <br>
-	<button type="reset" class="btn btn-warning" style="margin-left: 10%">effacer</button>
+	<button type="reset" class="btn btn-warning" style="margin-left: 5%">effacer</button>
 	<p></p>
 	<br>
 </form>
@@ -71,4 +71,33 @@
 		<div ng-show="montrerMap" id="map" style="height: 500px; border: 2px solid black; margin-top: -2px" ></div>
 	</div>
 </div>
+<br>
+<br>
+<h2 ng-show="cache">PROPRIETAIRE</h2>
+<br>
+<table class="table table-bordered" ng-show="cache"
+			style="background-color: white; margin-top: 40px; margin-left: -1%">
+			<tr>
+				<th style="text-align: center">ID</th>
+				<th style="text-align: center">Nom</th>
+				<th style="text-align: center">Prenom</th>
+				<th style="text-align: center">NumPrive</th>
+				<th style="text-align: center">NumTravail</th>
+				<th style="text-align: center">Rue</th>
+				<th style="text-align: center">CodePostal</th>
+				<th style="text-align: center">Ville</th>
+			</tr>
+			<tr>
+				<td style="text-align: center">{{b.proprietaire.id}}</td>
+				<td style="text-align: center">{{b.proprietaire.nom}}</td>
+				<td style="text-align: center">{{b.proprietaire.prenom}}</td>
+				<td style="text-align: center">{{b.proprietaire.numPrive}}</td>
+				<td style="text-align: center">{{b.proprietaire.numTravail}}</td>
+				<td style="text-align: center">{{b.adresse.rue}}</td>
+				<td style="text-align: center">{{b.adresse.codePostal}}</td>
+				<td style="text-align: center">{{b.adresse.ville}}</td>
+			</tr>
+
+		</table>
+	<br>
 </div>
