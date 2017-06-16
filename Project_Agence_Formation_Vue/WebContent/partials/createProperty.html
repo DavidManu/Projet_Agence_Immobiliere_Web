@@ -54,13 +54,8 @@
       <input type="text" class="form-control" id="image" ng-model="addPropertyForm.image" >
     </div>
     
-    <div id="div" class="form-group" style="border: 0px;background-color: none" >
-      <label for="cadastre"><p>Cadastre</p></label>
-      <input type="text" class="form-control" id="cadastre" ng-model="addPropertyForm.cadastre" >
-    </div>
-    
     <br>
-	<button type="submit" class="btn btn-default" style="margin-left: 10%" ng-click="infoSup(addPropertyForm.genre)" >suite</button>
+	<button type="submit" class="btn btn-default" style="margin-left: 5%" ng-click="infoSup(addPropertyForm.genre)" >suite</button>
     
     <br>
     <h2  ng-show='indice3' >INFORMATIONS SUPPLEMENTAIRES</h2>
@@ -149,12 +144,24 @@
       <label for="idp"><p>ID proprietaire</p></label>
       <input type="number" class="form-control" id="idp" placeholder="ID du proprietaire" ng-model="addPropertyForm.proprietaire.id">
     </div>
+    
+    <div id="div" class="control-group" style="border: 0px;background-color: none" ng-show='indice3' >
+    <label class="control-label" for="etat"><p>Categorie</p></label>
+	  <div class="controls">
+		<select id="etat" ng-model="addPropertyForm.classeStandard.id" >
+		  <option ng-repeat="cs in listecs" value="{{cs.id}}">{{cs.type}}</option>
+		</select>
+	  </div>
+	</div>
+	
+	<br>
+	<h2 ng-show='indice4' >OPERATION REUSSI</h2>
   
   <br>
-  <button type="submit" class="btn btn-primary"  ng-show='indice3' style="margin-left: 10%" ng-click="addProperty()" >ajouter</button>
+  <button type="submit" class="btn btn-primary"  ng-show='indice3' style="margin-left: 5%" ng-click="addProperty()" >ajouter</button>
   <br>
   <br>
-  <button type="reset" class="btn btn-warning"  ng-show='indice3' style="margin-left: 10%" >effacer</button>
+  <button type="reset" class="btn btn-warning"  ng-show='indice3' style="margin-left: 5%" >effacer</button>
   <p></p>
   <br>
 </form>

@@ -199,6 +199,7 @@ monApp
 	$scope.indice1=false;
 	$scope.indice2=false;
 	$scope.indice3=false;
+	$scope.indice4=false;
 	$scope.addPropertyForm={
 		type: "",
 		superficie: 0,
@@ -232,12 +233,13 @@ monApp
 			$scope.indice2=true;
 		}
 		$scope.indice3=true;
-		console.log($scope.indice1);
-		console.log($scope.indice2);
-		console.log($scope.indice3);
+		biensProvider.getListcs(function(calback){
+			$scope.listecs=calback;
+		});
 	};
 	$scope.addProperty=function(){
 		biensProvider.createProperty($scope.addPropertyForm, function(calback){
+			$scope.indice4=true;
 			if ((calback!=0)&&(calback!="")) {
 				$location.path('/listOfProperty');
 			}
@@ -249,6 +251,7 @@ monApp
 	$scope.indice1=false;
 	$scope.indice2=false;
 	$scope.indice3=false;
+	$scope.indice4=false;
 	$scope.updatePropertyForm={
 		id: "",
 		type: "",
@@ -283,12 +286,13 @@ monApp
 			$scope.indice2=true;
 		}
 		$scope.indice3=true;
-		console.log($scope.indice1);
-		console.log($scope.indice2);
-		console.log($scope.indice3);
+		biensProvider.getListcs(function(calback){
+			$scope.listecs=calback;
+		});
 	};
 	$scope.updateProperty=function(){
 		biensProvider.changeProperty($scope.updatePropertyForm, function(calback){
+			$scope.indice4=true;
 			if ((calback!=0)&&(calback!="")) {
 				$location.path('/listOfProperty');
 			}

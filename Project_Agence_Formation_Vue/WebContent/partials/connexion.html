@@ -1,21 +1,23 @@
+<div style="height: 700px" >
 <h2>CONNEXION</h2>
 <br>
 <form>
   <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <label for="id"><p>ID</p></label>
+    <label for="id"><p>Identifiant</p></label>
     <input type="text" class="form-control" id="id" placeholder="identifiant" ng-model="identifiant" >
   </div>
   <div id="div" class="form-group" style="border: 0px;background-color: none" >
-    <label for="mdp"><p>ID</p></label>
-    <input type="text" class="form-control" id="mdp" placeholder="mot de passe" ng-model="mdp" >
+    <label for="mdp"><p>Mot de passe</p></label>
+    <input type="password" class="form-control" id="mdp" placeholder="mot de passe" ng-model="mdp" >
   </div>
   <br>
-  <button type="submit" class="btn btn-success" style="margin-left: 10%" ng-click="connexion(identifiant, mdp)" >connexion</button>
+  <button type="submit" class="btn btn-success" style="margin-left: 5%" ng-click="connexion(identifiant, mdp)" >connexion</button>
   <br>
   <br>
-  <button type="reset" class="btn btn-warning" style="margin-left: 10%" >effacer</button>
+  <button type="reset" class="btn btn-warning" style="margin-left: 5%" >effacer</button>
   <br>
   <div>
   	<h2 ng-show=error style="color: red" >Vous vous etes trompe</h2>
   </div>
 </form>
+</div>
