@@ -46,7 +46,7 @@
 <title>accueil</title>
 </head>
 
-<body ng-app="monApp" ng-controller="monC">
+<body ng-app="monApp" ng-controller="monC" style="background-color: #333333" >
 	<div ng-include="'partials/Template/header.html'"></div>
 
 	<nav ng-hide=indiceCo class="navbar navbar-inverse">
@@ -107,13 +107,21 @@
 				</ul></li>
 		</ul>
 	</nav>
-
-	<br>
-
-	<div style="position: absolute; margin-top: 50px" id="div"
-		ng-view></div>
 	
-	<div ng-include="'partials/Template/footer.html'" style="postion: absolute; margin-top: 100%"></div>
+	<div style="background-color: white; width: 90%; margin-top: -20px; margin-left: 5%" >
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="div"
+		ng-view></div>
+	</div>
+	
+	<div ng-include="'partials/Template/footer.html'" style="postion: absolute"></div>
 	<script>
 		monApp.controller("monC", function($scope) {
 

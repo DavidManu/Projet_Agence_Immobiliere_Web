@@ -1,62 +1,57 @@
-<h2>UNE PROPRIETE</h2>
-<br>
-<div
-	style="display: inline-block; margin-top: 0%; width: 60%; margin-left: 35%">
-	<ul class="media-list">
-		<li class="media">
-			<div class="media-left">
-				<img src=resource/images/{{b.image}} width="256px">
-			</div>
-			<div class="media-body">
-				<ul>
-					<li ng-show="indice1"><p style="text-align: left">
-							<b>{{b.type}} a acheter</b>
-						</p></li>
-					<li ng-show="indice2"><p style="text-align: left">
-							<b>{{b.type}} a louer ({{b.garniture}})</b>
-						</p></li>
-					<li><p style="text-align: left">
-							<b>batiment {{b.etat}}</b>
-						</p></li>
-					<li><p style="text-align: left">
-							<b>superficie de {{b.superficie|number:1}} m*m</b>
-						</p></li>
-					<li ng-show='indice1'><p style="text-align: left">
-							<b>prix : {{b.prix|number:0}} euros</b>
-						</p></li>
-					<li ng-show='indice2'><p style="text-align: left">
-							<b>loyer : {{b.loyer|number:0}} + {{b.charges|number:0}} de
-								charges</b>
-						</p></li>
-					<li ng-show='indice2'><p style="text-align: left">
-							<b>caution : {{b.caution|number:0}} euros</b>
-						</p></li>
-					<li><p style="text-align: left">
-							<b>disponible a partir du {{b.dateDispo|date: "dd"}}
-								{{b.dateDispo|date: "MMMM"}} {{b.dateDispo|date: "yyyy"}}</b>
-						</p></li>
-					<li><p style="text-align: left">
-							<b>adresse : {{b.adresse.rue}}, {{b.adresse.codePostal}}
-								{{b.adresse.ville}}</b>
-						</p></li>
-    				<li><p style="text-align: left"><b>Cadastre : <a target="_blank"
-    				href="https://www.geoportail.gouv.fr/carte?c={{lng}},{{lat}}&z=20&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&l1=CADASTRALPARCELS.PARCELS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes">
-    				{{b.cadastre}}</a></b></p></li>
-					<li>
-						<p style="text-align: center">
-							<b>Effectuez une visite virtuelle </b>
-						</p> <video id="example_video_1" class="video-js vjs-default-skin"
-							controls poster="resource/images/{{b.image}}.jpg" preload="auto"
-							width="800" height="400" style="width: 100%" vjs-video>
-							<source src="resource/images/{{b.video}}.mp4" type='video/mp4' />
-					</li>
-				</ul>
-    			<br>
-				<button ng-hide=indiceCo type="submit" class="btn btn-default" style="margin-left: 10%" ng-click="XXX" >visite</button>
-				<br>
-			</div>
-		</li>
-	</ul>
+<div style="height: 1200px" >
+<div style="display: inline-block; width: 60%; margin-top: 0px; margin-left: 0%" >
+	<div style="width: 95%; margin-top: 1%; margin-left: 2%; border: 2px solid black; background-color: white" >
+		<h2 style="color: black; text-align: left; margin-left: 5%" >{{b.type}}</h2>
+		<br>
+		<img src=resource/images/{{b.image}} style="margin-left: 5%" >
+		<p></p>
+		<br>
+	</div>
+	<div style="width: 95%; margin-top: -2px; margin-left: 2%; border: 2px solid black" >
+		<video id="example_video_1" class="video-js vjs-default-skin" controls poster="resource/images/{{b.image}}.jpg" preload="auto"
+				style="width: 100%" vjs-video>
+		<source src="resource/images/{{b.video}}.mp4" type='video/mp4' />
+	</div>
 </div>
-<br/>
-<div ng-show="montrerMap" id="map" style="width: 90%; margin-left: 5%; height: 600px" ></div>
+
+<div style="float: right; width: 40%; margin-top: 0.6%; background-color: white" >
+	<div>
+		<div style="border: 2px solid black; background-color: #FC9A6D" >
+			<br>
+			<p style="text-align: center"><b>Cadastre</b></p>
+			<br>
+		</div>
+		<div style="border: 2px solid black; margin-top: -2px" >
+			<br>
+			<button type="submit" class="btn btn-warning" style="width: 80%; margin-left: 10%" ><a target="_blank"
+    				href="https://www.geoportail.gouv.fr/carte?c={{lng}},{{lat}}&z=20&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&l1=CADASTRALPARCELS.PARCELS::GEOPORTAIL:OGC:WMTS(1)&permalink=yes"><p>cadastre</p></a></button>
+    		<p></p>
+		</div>
+		<div style="border: 2px solid black; margin-top:-2px; background-color: #FC9A6D" >
+			<br>
+			<p style="text-align: center"><b>Informations</b></p>
+			<br>
+		</div>
+		<div style="margin-top: -2px; border: 2px solid black" >
+		<br>
+		<ul>
+			<li ng-show="indice1"><p style="text-align: left"><b>{{b.type}} a acheter</b></p></li>
+			<li ng-show="indice2"><p style="text-align: left"><b>{{b.type}} a louer ({{b.garniture}})</b></p></li>
+			<li><p style="text-align: left"><b>batiment {{b.etat}}</b></p></li>
+			<li><p style="text-align: left"><b>superficie de {{b.superficie|number:1}} m*m</b></p></li>
+			<li ng-show='indice1'><p style="text-align: left"><b>prix : {{b.prix|number:0}} euros</b></p></li>
+			<li ng-show='indice2'><p style="text-align: left"><b>loyer : {{b.loyer|number:0}} + {{b.charges|number:0}} de charges</b></p></li>
+			<li ng-show='indice2'><p style="text-align: left"><b>caution : {{b.caution|number:0}} euros</b></p></li>
+			<li><p style="text-align: left"><b>disponible a partir du {{b.dateDispo|date: "dd"}} {{b.dateDispo|date: "MMMM"}} {{b.dateDispo|date: "yyyy"}}</b></p></li>
+			<li><p style="text-align: left"><b>adresse : {{b.adresse.rue}}, {{b.adresse.codePostal}} {{b.adresse.ville}}</b></p></li>
+		</ul>
+	</div>
+		<div style="border: 2px solid black; margin-top:-2px; background-color: #FC9A6D" >
+			<br>
+			<p style="text-align: center"><b>Map</b></p>
+			<br>
+		</div>
+		<div ng-show="montrerMap" id="map" style="height: 500px; border: 2px solid black; margin-top: -2px" ></div>
+	</div>
+</div>
+</div>

@@ -1,15 +1,16 @@
-<br/>
-<br/>
-<div style="display: inline-block;position: absolute;margin-top: 0%;width: 25%; margin-left: 5%">
+<div style="height: 1200px" >
+<div style="display: inline-block; position: absolute ; margin-top: 0%; width: 25%; margin-left: 5%; background-color: #FC9A6D; border: 2px solid black;">
+	<br>
+	<br>
 	<ul class="nav nav-pills nav-stacked">
 		<li ng-repeat="cs in listecs" >
-			<div class="panel panel-primary" style="background-color: #81BEF7; width: 80%" >
+			<div class="panel panel-primary" style="margin-top: -20px; margin-left: 4%; background-color: #FF5000; width: 92%" >
     			<button type="submit" ng-click="getPropertyByCategory(cs.id)" style="background-color: transparent; border: none" >
 					<div class="panel-body">
-	    				<p style="text-align: left" ><b>{{cs.type}}</b></p>
+	    				<p style="text-align: center; color: black" ><b>{{cs.type}}</b></p>
 	  				</div>
 	  			</button>
-  				<div style="background-color: #BDBDBD" class="panel-footer">
+  				<div style="background-color: with" class="panel-footer">
   					<p style="text-align: left">date de construction min : {{cs.dateConstructionMin}}</p>
   					<p style="text-align: left">surface min : {{cs.minSurfaceMin|number:0}}</p>
   					<p style="text-align: left">prix min : {{cs.prixMin|number:0}}</p>
@@ -18,24 +19,39 @@
 		<li>
 	</ul>
 	<br>
-	<div style="margin-top: 15%" class="dropup">
-  		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	<div style="margin-top: -20px; margin-left: 4%; background-color: #E8E8E8; width: 92%; border: 2px solid black" >
+		<br>
+		<p style="text-align: center"><b>Liste des operations</b></p>
+		<br>
+	</div>
+	<div style="margin-left: 4%; border: 2px solid black; width: 92%; background-color: white; margin-top: -2px" class="drodown">
+		<br>
+  		<button style="margin-left: 35%" aria-haspopup="true" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 		    Operations
 		    <span class="caret"></span>
   		</button>
-	    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+  		<br>
+  		<br>
+  		<br>
+  		<br>
+  		<br>
+  		<br>
+	    <ul style="margin-top: -25%; margin-left: 30%" class="dropdown-menu" aria-labelledby="dropdownMenu1">
 	      <li><a href="#!createCs">ajouter</a></li>
 	      <li><a href="#!updateCs">modifier</a></li>
 	      <li><a href="#!deletecs">supprimer</a></li>
 	    </ul>
 	</div>
+	<p></p>
+	<p></p>
 </div>
 <div style="display: inline-block;margin-top: 0%;width: 60%; margin-left: 40%">
 	<ul class="media-list">
-  		<li class="media" ng-repeat="b in listeBiens" >
+  		<li class="media" ng-repeat="b in listeBiens" style="border: 2px solid black; background-color: #FC9A6D" >
+  			<br>
     		<div class="media-left">
     			<button type="submit" ng-click="getProperty(b)" style="background-color: transparent; border: none" >
-        			<img src={{b.image}} width="256px">
+        			<img src=resource/images/{{b.image}} width="256px">
         		</a>
     		</div>
     		<div class="media-body">
@@ -55,4 +71,5 @@
     		<br>
   		</li>
 	</ul>
+</div>
 </div>
