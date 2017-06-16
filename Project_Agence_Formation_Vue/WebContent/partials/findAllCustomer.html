@@ -1,5 +1,13 @@
 <h1 align="center" style="color: #333;">Liste des client</h1>
 <div class="container">
+	<table class="table table-bordered">
+		<tr>
+			<th>Recherche par Nom : <input type="text"
+				ng-model="recherche.nom"></th>
+			<th>Recherche par Prenom : <input type="text"
+				ng-model="recherche.prenom"></th>
+		</tr>
+	</table>
 	<div class="row col-md-6 col-md-offset-2 custyle"
 		style="margin: auto; width: 100%">
 		<table class="table table-bordered"
@@ -14,7 +22,8 @@
 				<th style="text-align: center">Ville</th>
 				<th style="text-align: center">Operations</th>
 			</tr>
-			<tr ng-repeat="customer in listeCustomer" style="text-align: center">
+			<tr ng-repeat="customer in listeCustomer | filter=recherche"
+				style="text-align: center">
 				<td style="text-align: center">{{customer.id}}</td>
 				<td style="text-align: center">{{customer.nom}}</td>
 				<td style="text-align: center">{{customer.prenom}}</td>

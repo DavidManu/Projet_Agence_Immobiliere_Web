@@ -1,10 +1,18 @@
-<h1 align="center" style="color: #333;">Liste des proprietaires</h1>
+<h1 align="center" style="color: white;">Liste des proprietaires</h1>
 <div class="container">
-	<div class="row col-md-6 col-md-offset-2 custyle"
-		style="margin: auto; width: 100%">
+	<table class="table table-bordered">
+		<tr>
+			<th>Recherche par Nom : <input type="text"
+				ng-model="recherche.nom"></th>
+			<th>Recherche par Prenom : <input type="text"
+				ng-model="recherche.prenom"></th>
+		</tr>
+	</table>
+	<div class="row col-md-6 col-md-offset-2 custyle">
 		<table class="table table-bordered"
-			style="background-color: white; margin-top: 40px">
-			<tr>
+			style="background-color: white; margin-top: 10px">
+			<h1 align="center" style="color: Black;">Liste des proprietaires</h1>
+			<tr style="background-color: white; margin-top: 20px">
 				<th style="text-align: center">ID</th>
 				<th style="text-align: center">Nom</th>
 				<th style="text-align: center">Prenom</th>
@@ -15,7 +23,8 @@
 				<th style="text-align: center">Ville</th>
 				<th style="text-align: center">Operations</th>
 			</tr>
-			<tr ng-repeat="owner in listeOwner" style="text-align: center">
+			<tr ng-repeat="owner in listeOwner | filter:recherche"
+				style="text-align: center">
 				<td style="text-align: center">{{owner.id}}</td>
 				<td style="text-align: center">{{owner.nom}}</td>
 				<td style="text-align: center">{{owner.prenom}}</td>
@@ -24,9 +33,9 @@
 				<td style="text-align: center">{{owner.adresse.rue}}</td>
 				<td style="text-align: center">{{owner.adresse.codePostal}}</td>
 				<td style="text-align: center">{{owner.adresse.ville}}</td>
-				<td style="text-align: center"><a class='btn btn-info btn-xs'
+				<td style="text-align: center"><a style="cursor: pointer"
 					ng-click="updateOLink(owner)">Modifier</a> | <a
-					class="btn btn-danger btn-xs" ng-click="deleteOLink(owner.id)">Supprimer</a>
+					style="cursor: pointer" ng-click="deleteOLink(owner.id)">Supprimer</a>
 				</td>
 			</tr>
 		</table>
