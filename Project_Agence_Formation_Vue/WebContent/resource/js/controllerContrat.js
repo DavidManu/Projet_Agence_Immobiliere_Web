@@ -30,13 +30,13 @@ monApp
 	$scope.addContratForm={
 			dateSignature:undefined,
 			refContrat:undefined,
-			Bien:{
+			bien:{
 				id:undefined
 			},
-			Client:{
+			client:{
 				id:undefined
 			},
-			Conseiller:{
+			conseiller:{
 				id:undefined
 			}
 	};
@@ -55,13 +55,13 @@ monApp
 			id:undefined,
 			dateSignature:undefined,
 			refContrat:undefined,
-			Bien:{
+			bien:{
 				id:undefined
 			},
-			Client:{
+			client:{
 				id:undefined
 			},
-			Conseiller:{
+			conseiller:{
 				id:undefined
 			}
 	}
@@ -70,14 +70,14 @@ monApp
 				id:$rootScope.contratMod.id,
 				dateSignature:$rootScope.contratMod.dateSignature,
 				refContrat:$rootScope.contratMod.refContrat,
-				Bien:{
-					id:$rootScope.contratMod.bien.id
+				bien:{
+					id:$rootScope.contratMod.bien
 				},
-				Client:{
-					id:$rootScope.contratMod.client.id
+				client:{
+					id:$rootScope.contratMod.client
 				},				
-				Conseiller:{
-					id:$rootScope.contratMod.conseiller.id
+				conseiller:{
+					id:$rootScope.contratMod.conseiller
 				}
 		}
 		$rootScope.contratMod=null;

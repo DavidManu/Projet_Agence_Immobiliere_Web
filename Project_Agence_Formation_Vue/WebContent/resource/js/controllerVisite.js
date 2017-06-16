@@ -31,13 +31,13 @@ monApp
 			dateVisite:undefined,
 			clientAccepte:undefined,
 			conseillerAccepte:undefined,
-			Bien:{
+			bien:{
 				id:undefined
 			},
-			Client:{
+			client:{
 				id:undefined
 			},
-			Conseiller:{
+			conseiller:{
 				id:undefined
 			}
 	};
@@ -57,7 +57,13 @@ monApp
 			dateVisite:undefined,
 			clientAccepte:undefined,
 			conseillerAccepte:undefined,
-			Conseiller:{
+			bien:{
+				id:undefined
+			},
+			client:{
+				id:undefined
+			},
+			conseiller:{
 				id:undefined
 			}
 	}
@@ -67,8 +73,14 @@ monApp
 				dateVisite:$rootScope.visiteMod.dateVisite,
 				clientAccepte:$rootScope.visiteMod.clientAccepte,
 				conseillerAccepte:$rootScope.visiteMod.conseillerAccepte,
+				Bien:{
+					id:$rootScope.visiteMod.bien
+				},
+				Client:{
+					id:$rootScope.visiteMod.client
+				},
 				Conseiller:{
-					id:$rootScope.visiteMod.conseiller.id
+					id:$rootScope.visiteMod.conseiller
 				}
 		}
 		$rootScope.visiteMod=null;
@@ -85,7 +97,7 @@ monApp
 
 .controller("deleteVisiteController",function($scope,visiteProvider,$location){
 	$scope.id=undefined;
-$scope.suppVisite=function(){
+$scope.delVisite=function(){
 	visiteProvider.delVisite($scope.id,function(callBack){
 		if(callBack!=undefined && callBack!=''){
 			$location.path('/listOfVisits');
