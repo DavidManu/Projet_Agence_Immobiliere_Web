@@ -21,6 +21,9 @@ monApp.config(function($routeProvider) {
 	}).when('/updateProperty', {
 		controller : 'updatePropertyController',
 		templateUrl : 'partials/updateProperty.html'
+	}).when('/updateProperty2', {
+		controller : 'updatePropertyController2',
+		templateUrl : 'partials/updateProperty2.html'
 	}).when('/deleteProperty', {
 		controller : 'deletePropertyController',
 		templateUrl : 'partials/deleteProperty.html'

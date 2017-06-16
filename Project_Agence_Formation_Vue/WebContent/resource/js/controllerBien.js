@@ -20,6 +20,12 @@ monApp
 		$location.path('/findAllPropertyByCategory');
 	};
 	
+	$scope.updateLien=function(bien){
+		$rootScope.bienModif=null;
+		$rootScope.bienModif=bien;
+		$location.path('/updateProperty2');
+	};
+	
 })
 
 .controller('findAllPropertyController2', function($scope, biensProvider, $rootScope, $location, $window) {
@@ -42,6 +48,12 @@ monApp
 		$rootScope.idCategory=null;
 		$rootScope.idCategory=id;
 		$location.path('/findAllPropertyByCategory');
+	};
+	
+	$scope.updateLien=function(bien){
+		$rootScope.bienModif=null;
+		$rootScope.bienModif=bien;
+		$location.path('/updateProperty2');
 	};
 	
 })
@@ -273,6 +285,59 @@ monApp
 		},
 		dateDispo: undefined,
 		dateMEL: undefined
+	};
+	
+	$scope.infoSup=function(genre){
+		console.log(genre);
+		if (genre=="true") {
+			$scope.indice1=true;
+			$scope.indice2=false;
+		}
+		else {
+			$scope.indice1=false;
+			$scope.indice2=true;
+		}
+		$scope.indice3=true;
+		biensProvider.getListcs(function(calback){
+			$scope.listecs=calback;
+		});
+	};
+	$scope.updateProperty=function(){
+		biensProvider.changeProperty($scope.updatePropertyForm, function(calback){
+			$scope.indice4=true;
+			if ((calback!=0)&&(calback!="")) {
+				$location.path('/listOfProperty');
+			}
+		});
+	};
+})
+
+.controller('updatePropertyController2', function($scope, $rootScope, biensProvider, $location){
+	$scope.indice1=false;
+	$scope.indice2=false;
+	$scope.indice3=false;
+	$scope.indice4=false;
+	$scope.updatePropertyForm={
+		id: $rootScope.bienModif.id,
+		type: $rootScope.bienModif.type,
+		superficie: $rootScope.bienModif.superficie,
+		genre: $rootScope.bienModif.genre,
+		statut: $rootScope.bienModif.statut,
+		image: $rootScope.bienModif.image,
+		cadastre: $rootScope.bienModif.cadastre,
+		prix: $rootScope.bienModif.prix,
+		etat: $rootScope.bienModif.etat,
+		loyer: $rootScope.bienModif.loyer,
+		charges: $rootScope.bienModif.charges,
+		caution: $rootScope.bienModif.caution,
+		garniture: $rootScope.bienModif.garniture,
+		adresse: {
+			rue: $rootScope.bienModif.adresse.rue,
+			codePostal: $rootScope.bienModif.adresse.codePostal,
+			ville: $rootScope.bienModif.adresse.ville
+		},
+		dateDispo: $rootScope.bienModif.dateDispo,
+		dateMEL: $rootScope.bienModif.dateMEL
 	};
 	
 	$scope.infoSup=function(genre){

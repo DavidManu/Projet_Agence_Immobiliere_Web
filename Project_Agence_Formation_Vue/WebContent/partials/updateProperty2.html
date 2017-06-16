@@ -1,0 +1,181 @@
+<h2>DEFINITION DE L'ID</h2>
+<br>
+
+<form>
+
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="id"><p>ID</p></label>
+    <input type="number" class="form-control" id="id" placeholder="ID de la propriete" ng-model="updatePropertyForm.id" >
+  </div>
+
+  <br>
+  <h2>INFORMATIONS GENERALES</h2>
+  <br>
+  
+  <div id="div" class="control-group" style="border: 0px;background-color: none" >
+    <label class="control-label" for="tye"><p>Type</p></label>
+	  <div class="controls">
+		<select id="type" ng-model="updatePropertyForm.type">
+		  <option value="appartement">appartement</option>
+		  <option value="bureau">bureau</option>
+		  <option value="entrepôt">entrepot</option>
+		  <option value="local">local</option>
+		  <option value="maison">maison</option>
+		  <option value="terrain">terrain</option>
+		</select>
+	  </div>
+	</div>
+	
+	<br>
+  
+  <div id="div" class="form-group" style="border: 0px;background-color: none" >
+    <label for="superficie"><p>Superficie</p></label>
+    <input type="number" class="form-control" id="superficie" placeholder="superficie en m2" ng-model="updatePropertyForm.superficie" >
+  </div>
+  
+  <div id="div" class="control-group" style="border: 0px;background-color: none" >
+    <label class="control-label" for="genre"><p>Genre</p></label>
+	  <div class="controls">
+		<select id="genre" ng-model="updatePropertyForm.genre">
+		  <option value="true">achat</option>
+		  <option value="false">location</option>
+		</select>
+	  </div>
+	</div>
+	
+	<br>
+	
+	<div id="div" class="control-group" style="border: 0px;background-color: none" >
+    <label class="control-label" for="statut"><p>Statut</p></label>
+	  <div class="controls">
+		<select id="statut" ng-model="updatePropertyForm.statut">
+		  <option value="en recherche">en recherche</option>
+		  <option value="en location">en location</option>
+		  <option value="vendu">vendu</option>
+		</select>
+	  </div>
+	</div>
+	
+	<br>
+	
+	<div id="div" class="form-group" style="border: 0px;background-color: none" >
+      <label for="image"><p>Photo</p></label>
+      <input type="text" class="form-control" id="image" ng-model="updatePropertyForm.image" >
+    </div>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none" >
+      <label for="video"><p>Video</p></label>
+      <input type="text" class="form-control" id="video" ng-model="addPropertyForm.video" >
+    </div>
+    
+    <br>
+	<button type="submit" class="btn btn-default" style="margin-left: 5%" ng-click="infoSup(updatePropertyForm.genre)" >suite</button>
+    
+    <br>
+    <h2  ng-show='indice3' >INFORMATIONS SUPPLEMENTAIRES</h2>
+    
+    <br>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none" ng-show='indice1' >
+      <label for="prix"><p>Prix</p></label>
+      <input type="number" class="form-control" id="prix" placeholder="Prix de la propriete" ng-model="updatePropertyForm.prix">
+    </div>
+    
+    <div id="div" class="control-group" style="border: 0px;background-color: none" ng-show='indice3' >
+    <label class="control-label" for="etat"><p>Etat</p></label>
+	  <div class="controls">
+		<select id="etat" ng-model="updatePropertyForm.etat">
+		  <option value="ancien">ancien</option>
+		  <option value="neuf">neuf</option>
+		</select>
+	  </div>
+	</div>
+	
+	<br>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none" ng-show='indice2' >
+      <label for="loyer"><p>Loyer</p></label>
+      <input type="number" class="form-control" id="loyer" placeholder="Montant du loyer" ng-model="updatePropertyForm.loyer">
+    </div>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none" ng-show='indice2' >
+      <label for="charges"><p>Charges</p></label>
+      <input type="number" class="form-control" id="charges" placeholder="Montant des charges" ng-model="updatePropertyForm.charges">
+    </div>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none" ng-show='indice2' >
+      <label for="caution"><p>Caution</p></label>
+      <input type="number" class="form-control" id="caution" placeholder="Montant de la caution" ng-model="updatePropertyForm.caution">
+    </div>
+    
+    <div id="div" class="control-group" style="border: 0px;background-color: none" ng-show='indice2' >
+    <label class="control-label" for="garniture"><p>Garniture</p></label>
+	  <div class="controls">
+		<select id="garniture" ng-model="updatePropertyForm.garniture">
+		  <option value="meuble">meuble</option>
+		  <option value="non-meuble">non-meuble</option>
+		</select>
+	  </div>
+	</div>
+	
+    <h2  ng-show='indice3' >ADRESSE</h2>
+    <br>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' >
+      <label for="rue"><p>Rue</p></label>
+      <input type="text" class="form-control" id="rue" placeholder="Rue" ng-model="updatePropertyForm.adresse.rue" >
+    </div>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' >
+      <label for="codepostal"><p>Code postal</p></label>
+      <input type="text" class="form-control" id="codepostal" placeholder="Code postal" ng-model="updatePropertyForm.adresse.codePostal" >
+    </div>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' >
+      <label for="ville"><p>Ville</p></label>
+      <input type="text" class="form-control" id="ville" placeholder="Ville" ng-model="updatePropertyForm.adresse.ville" >
+    </div>
+	
+	<br>
+    <h2  ng-show='indice3' >DATES</h2>
+    <br>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' >
+      <label for="dispo"><p>Disponibilite</p></label>
+      <input type="date" class="form-control" id="dispo" ng-model="updatePropertyForm.dateDispo" >
+    </div>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none"  ng-show='indice3' >
+      <label for="MEL"><p>Date de mise en ligne</p></label>
+      <input type="date" class="form-control" id="MEL" ng-model="updatePropertyForm.dateMEL" >
+    </div>
+	
+	<br>
+    <h2  ng-show='indice3' >ASSOCIATIONS</h2>
+    <br>
+    
+    <div id="div" class="form-group" style="border: 0px;background-color: none" ng-show='indice3' >
+      <label for="idp"><p>ID proprietaire</p></label>
+      <input type="number" class="form-control" id="idp" placeholder="ID du proprietaire" ng-model="updatePropertyForm.proprietaire.id">
+    </div>
+    
+    <div id="div" class="control-group" style="border: 0px;background-color: none" ng-show='indice3' >
+    <label class="control-label" for="etat"><p>Categorie</p></label>
+	  <div class="controls">
+		<select id="etat" ng-model="updatePropertyForm.classeStandard.id" >
+		  <option ng-repeat="cs in listecs" value="{{cs.id}}">{{cs.type}}</option>
+		</select>
+	  </div>
+	</div>
+	
+	<br>
+	<h2 ng-show='indice4' >OPERATION REUSSI</h2>
+  
+  <br>
+  <button type="submit" class="btn btn-info"  ng-show='indice3' style="margin-left: 5%" ng-click="updateProperty()" >modifier</button>
+  <br>
+  <br>
+  <button type="reset" class="btn btn-warning"  ng-show='indice3' style="margin-left: 5%" >effacer</button>
+  <p></p>
+  <br>
+</form>
